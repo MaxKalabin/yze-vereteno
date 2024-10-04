@@ -68,7 +68,7 @@
     "gridUnits": "m",
     "primaryTokenAttribute": "health",
     "secondaryTokenAttribute": "power",
-    "url": "",
-    "manifest": "",
-    "download": ""
+    "url": "https://github.com/MaxKalabin/yze-vereteno/blob/main/",
+    "manifest": "https://github.com/MaxKalabin/yze-vereteno/blob/main/system.json",
+    "download": "https://github.com/MaxKalabin/yze-vereteno/blob/main/system.json"
 }
