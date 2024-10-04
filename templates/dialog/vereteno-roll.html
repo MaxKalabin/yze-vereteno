@@ -1,0 +1,19 @@
+<form class="flexcol">
+    {{#if rollVisibility}}
+        {{> systems/yzevereteno/templates/dialog/roll-visibility.html }}
+    {{/if}}
+
+    {{#if gunnerToChoose}}
+        {{> systems/yzevereteno/templates/dialog/roll-shipGunner.html }}
+    {{/if}}
+    
+    {{#if isAutomatic}}
+        {{> systems/yzevereteno/templates/dialog/roll-automaticFire.html }}
+    {{/if}}
+
+    {{#if_objectNotEmpty itemModifiers}}
+        {{> systems/yzevereteno/templates/dialog/roll-itemModifiers.html }}
+    {{/if_objectNotEmpty}}
+
+    {{> systems/yzevereteno/templates/dialog/roll-modifiers.html }}
+</form>

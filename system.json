@@ -1,0 +1,73 @@
+{
+    "id": "yzevereteno",
+    "title": "yzevereteno",
+    "description": "Vereteno for Foundry VTT.",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "12"
+    },
+    "templateVersion": 2,
+    "authors": [
+        {
+            "name": "Winks"
+        }
+    ],
+    "esmodules": [
+        "module/yzevereteno.js",
+        "module/hooks.js"
+    ],
+    "styles": [
+        "css/yzevereteno.css",
+        "css/yzeveretenomce.css"
+    ],
+    "scripts": [],
+    "packs": [
+        {
+            "name": "ship_sheet_instructions",
+            "label": "Ship Sheet Instructions",
+            "path": "packs/ship-sheet-instructions.db",
+            "type": "JournalEntry",
+            "module": "Vereteno"
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json"
+        },
+        {
+            "lang": "es",
+            "name": "Spanish",
+            "path": "lang/es.json"
+        },
+        {
+            "lang": "sv",
+            "name": "Swedish",
+            "path": "lang/sv.json"
+        },
+        {
+            "lang": "pt-BR",
+            "name": "Brazilian Portuguese",
+            "path": "lang/pt-br.json"
+        },
+        {
+            "lang": "fr",
+            "name": "French",
+            "path": "lang/fr.json"
+        }
+    ],
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "health",
+    "secondaryTokenAttribute": "power",
+    "url": "",
+    "manifest": "",
+    "download": ""
+}

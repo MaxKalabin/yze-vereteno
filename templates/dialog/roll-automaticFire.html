@@ -1,0 +1,14 @@
+<div style="padding: 1em 1em;">
+  <h3>{{localize "YZEvereteno.AutomaticFire"}}</h3>
+  <input type='checkbox' name='automaticFire' {{#if automaticFire}}checked{{/if}} data-dtype='Boolean' />
+  <label style="position:relative; bottom:6px;">{{localize "YZEvereteno.AutomaticFire"}}</label>
+  {{#if automaticFire}}
+    <span style="position:relative; bottom:6px;">({{localize "YZEvereteno.AutomaticFireModifier"}})</span>
+    <br>
+    <input type='checkbox' name='machineGunner' {{#if machineGunner}}checked{{/if}} data-dtype='Boolean' />
+    <label style="position:relative; bottom:6px;">{{localize "YZEvereteno.Talent"}}: {{localize "YZEvereteno.TalentMachinegunner"}}?</label>
+    <br>
+    <input type='checkbox' name='highCapacity' {{#if highCapacity}}checked{{/if}} data-dtype='Boolean' />
+    <label style="position:relative; bottom:6px;">{{localize "YZEvereteno.Weapon"}}: {{localize "YZEvereteno.FeatureWeaponHighCapacity"}}?</label>
+  {{/if}}
+</div>

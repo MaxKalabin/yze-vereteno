@@ -1,0 +1,33 @@
+{
+  "name": "yzecoriolis",
+  "version": "1.0.0",
+  "description": "CSS compiler for the Year Zero Engine - Coriolis system",
+  "scripts": {
+    "build": "gulp",
+    "compile": "gulp css",
+    "watch": "gulp",
+    "gulp": "gulp",
+    "format": "prettier --write ",
+    "lint": "eslint --ext .js ",
+    "lint:watch": "esw -w "
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Winks",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-foundry-vtt": "0.0.1",
+    "eslint-watch": "^7.0.0",
+    "prettier": "2.2.1"
+  }
+}
