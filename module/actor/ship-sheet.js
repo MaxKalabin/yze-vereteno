@@ -25,12 +25,12 @@ import { veretenoModifierDialog } from "../veretenoRollModifier.js";
  * Extend the basic ActorSheet for a basic vereteno ship sheet
  * @extends {ActorSheet}
  */
-export class yzeveretenoShipSheet extends ActorSheet {
+export class YZEVERETENOShipSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["yzevereteno", "sheet", "actor", "ship"],
-      template: "systems/yzevereteno/templates/actor/ship-sheet.html",
+      classes: ["YZEVERETENO", "sheet", "actor", "ship"],
+      template: "systems/YZEVERETENO/templates/actor/ship-sheet.html",
       width: 1200,
       height: 880,
       scrollY: [
@@ -73,7 +73,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     // the one we don't wish to have any sort of 'object sizing' and everything
     // else we do, we can exclude it specifically.
     const shipImageSet =
-      baseData.actor.img !== CONFIG.YZEvereteno.DEFAULT_SHIP_KEY_ART;
+      baseData.actor.img !== CONFIG.YZEVERETENO.DEFAULT_SHIP_KEY_ART;
 
     let imageCSSClass = ""; // no css class
     if (shipImageSet) {
@@ -85,7 +85,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const sheetData = {
       editable: baseData.editable,
       owner: baseData.actor.isOwner,
-      config: CONFIG.YZEvereteno,
+      config: CONFIG.YZEVERETENO,
       shipNotes,
       ...baseData.actor,
       ...stats,
@@ -136,7 +136,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     // make a list of module catgeories
     // sets the dataset for new modules
     const modulesList = {};
-    for (let k of Object.keys(CONFIG.YZEvereteno.shipModuleCategories)) {
+    for (let k of Object.keys(CONFIG.YZEVERETENO.shipModuleCategories)) {
       modulesList[k] = {
         dataset: {
           type: "shipModule",
@@ -172,28 +172,28 @@ export class yzeveretenoShipSheet extends ActorSheet {
       features: {
         dataset: {
           type: "shipFeature",
-          defaultName: game.i18n.localize("YZEvereteno.NewShipFeature"),
+          defaultName: game.i18n.localize("YZEVERETENO.NewShipFeature"),
         },
         items: getOwnedItemsByType(actor, "shipFeature").map((f) => f),
       },
       criticalDamages: {
         dataset: {
           type: "shipCriticalDamage",
-          defaultName: game.i18n.localize("YZEvereteno.NewShipCriticalDamage"),
+          defaultName: game.i18n.localize("YZEVERETENO.NewShipCriticalDamage"),
         },
         items: getOwnedItemsByType(actor, "shipCriticalDamage").map((cd) => cd),
       },
       problems: {
         dataset: {
-          type: "shipProblem",
-          defaultName: game.i18n.localize("YZEvereteno.NewShipProblem"),
+          type: "shipИзъян",
+          defaultName: game.i18n.localize("YZEVERETENO.NewShipИзъян"),
         },
-        items: getOwnedItemsByType(actor, "shipProblem").map((p) => p),
+        items: getOwnedItemsByType(actor, "shipИзъян").map((p) => p),
       },
       logbooks: {
         dataset: {
           type: "shipLogbook",
-          defaultName: game.i18n.localize("YZEvereteno.NewShipLogbook"),
+          defaultName: game.i18n.localize("YZEVERETENO.NewShipLogbook"),
         },
         items: getOwnedItemsByType(actor, "shipLogbook").map((p) => p),
       },
@@ -257,9 +257,9 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const name = dataset.defaultname;
     let imgPath = "";
     if (dataset.category === "weapon") {
-      imgPath = "systems/yzevereteno/css/icons/weapons-icon.svg";
+      imgPath = "systems/YZEVERETENO/css/gods/weapons-god.svg";
     } else {
-      imgPath = "systems/yzevereteno/css/icons/gear-icon.svg";
+      imgPath = "systems/YZEVERETENO/css/gods/gear-god.svg";
     }
     // Prepare the item object.
     const itemData = {
@@ -340,7 +340,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const canChange = canChangeEPForShip(this.actor);
     if (!canChange) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidEPPermissions")
+        game.i18n.localize("YZEVERETENO.InvalidEPPermissions")
       );
       return;
     }
@@ -348,7 +348,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const newBarValue = this.getNewBarValue(event);
     if (crewHasTokens(this.actor)) {
       ui.notifications.info(
-        game.i18n.localize("YZEvereteno.EnergyPointsReset")
+        game.i18n.localize("YZEVERETENO.EnergyPointsReset")
       );
     }
     await setActiveEPTokens(this.actor, newBarValue);
@@ -360,7 +360,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const canChange = canChangeEPForShip(this.actor);
     if (!canChange) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidEPPermissions")
+        game.i18n.localize("YZEVERETENO.InvalidEPPermissions")
       );
       return;
     }
@@ -416,7 +416,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
 
     if (!isGM && !isRollingForOwnActor) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidCrewRollPermissions")
+        game.i18n.localize("YZEVERETENO.InvalidCrewRollPermissions")
       );
       return;
     }
@@ -425,8 +425,8 @@ export class yzeveretenoShipSheet extends ActorSheet {
     const crewmate = getActorDataById(crewId);
     const crewPosition = crewmate.system.bio.crewPosition;
     const crewPositionName =
-      CONFIG.YZEvereteno.crewPositions[crewPosition.position];
-    const skillKey = CONFIG.YZEvereteno.crewRolls[crewPosition.position];
+      CONFIG.YZEVERETENO.crewPositions[crewPosition.position];
+    const skillKey = CONFIG.YZEVERETENO.crewRolls[crewPosition.position];
     const attributeKey = crewmate.system.skills[skillKey].attribute;
     const itemModifiers = crewmate.system.itemModifiers[skillKey];
 
@@ -446,7 +446,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
       pushed: false,
     };
     const chatOptions = crewEntity._prepareChatRollOptions(
-      "systems/yzevereteno/templates/sidebar/roll.html",
+      "systems/YZEVERETENO/templates/sidebar/roll.html",
       "skill"
     );
     new veretenoModifierDialog(rollData, chatOptions).render(true);
@@ -482,7 +482,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
     // Nothing can be fired without a crew.
     if (Object.keys(crewMembers).length < 1) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidNoCrewMembers")
+        game.i18n.localize("YZEVERETENO.InvalidNoCrewMembers")
       );
       return;
     }
@@ -490,14 +490,14 @@ export class yzeveretenoShipSheet extends ActorSheet {
     // The GM can roll on any actor.
     if (!isGM && (crewMembersControlled.length < 1)) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidCrewRollPermissionsAny")
+        game.i18n.localize("YZEVERETENO.InvalidCrewRollPermissionsAny")
       );
       return;
     }
     // Check if a weapon is disabled.
     if (!item.enabled) {
       ui.notifications.error(
-        game.i18n.localize("YZEvereteno.InvalidWeaponDisabled")
+        game.i18n.localize("YZEVERETENO.InvalidWeaponDisabled")
       );
       return;
     }
@@ -532,7 +532,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
       bonus: item.bonus
         ? item.bonus
         : 0,
-      rollTitle: game.i18n.localize("YZEvereteno.CrewSpotGunner") + " " + gunnerName + "\n- " + ship.name,
+      rollTitle: game.i18n.localize("YZEVERETENO.CrewSpotGunner") + " " + gunnerName + "\n- " + ship.name,
       pushed: false,
       isAutomatic: false,
       isExplosive: false,
@@ -552,7 +552,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
       itemModifiers: gunnerItemModifiers,
     };
     const chatOptions = ship._prepareChatRollOptions(
-      "systems/yzevereteno/templates/sidebar/roll.html",
+      "systems/YZEVERETENO/templates/sidebar/roll.html",
       "weapon"
     );
     new veretenoModifierDialog(rollData, chatOptions).render(true);
@@ -609,7 +609,7 @@ export class yzeveretenoShipSheet extends ActorSheet {
         `<div class="item-summary"><div class="item-summary-wrapper"><div>${chatData.description}</div></div></div>`
       );
       // toogle when features should (not) always be shown
-      if (!game.settings.get("yzevereteno", "AlwaysShowFeatures")) {
+      if (!game.settings.get("YZEVERETENO", "AlwaysShowFeatures")) {
         let props = $(`<div class="item-properties"></div>`);
         if (chatData.special) {
           Object.keys(chatData.special).forEach(key=>{

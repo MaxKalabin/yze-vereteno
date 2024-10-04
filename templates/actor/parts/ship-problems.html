@@ -2,12 +2,12 @@
     <ol class="feature-list">
         {{!-- setup header for Problems--}}
         <li class="feature-category-header flexrow">
-            <span class="feature-category-name flexrow">{{localize "YZEvereteno.ShipProblem"}}</span>
+            <span class="feature-category-name flexrow">{{localize "YZEVERETENO.ShipИзъян"}}</span>
             {{#if owner}}
             <div class="feature-controls">
-                <a class="feature-control-add-widget shipItem-create" title='{{localize "YZEvereteno.ShipCreateProblem"}}'
+                <a class="feature-control-add-widget shipItem-create" title='{{localize "YZEVERETENO.ShipCreateИзъян"}}'
                     {{#each problems.dataset as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                    <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                    <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                 </a>
             </div>
             {{/if}}
@@ -22,10 +22,10 @@
                     <span class="flexrow">{{problem.name}}</span>
                 </div>
                 <div class="feature-controls">
-                    <a class="edit-widget faded shipItem-edit" title="{{localize "YZEvereteno.ShipEditProblem"}}" data-feature={{problem._id}}><i
+                    <a class="edit-widget faded shipItem-edit" title="{{localize "YZEVERETENO.ShipEditИзъян"}}" data-feature={{problem._id}}><i
                             class="fas fa-edit"></i></a>
                     <a class="edit-widget faded shipItem-delete"
-                        title="{{localize "YZEvereteno.ShipDeleteProblem"}}" data-feature={{problem._id}}><i class="fas fa-trash"></i></a>
+                        title="{{localize "YZEVERETENO.ShipDeleteИзъян"}}" data-feature={{problem._id}}><i class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>

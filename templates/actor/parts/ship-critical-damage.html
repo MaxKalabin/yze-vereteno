@@ -1,13 +1,13 @@
 <div class="tab panel critical-damage-panel" data-group="primary" data-tab="critDamage">
     <ol class="feature-list">
-        {{!-- setup header for Critical Damage--}}
+        {{!-- setup header for Критические Повреждения--}}
         <li class="feature-category-header flexrow">
-            <span class="feature-category-name flexrow">{{localize "YZEvereteno.ShipCriticalDamage"}}</span>
+            <span class="feature-category-name flexrow">{{localize "YZEVERETENO.ShipCriticalDamage"}}</span>
             {{#if owner}}
             <div class="feature-controls">
-                <a class="feature-control-add-widget shipItem-create" title='{{localize "YZEvereteno.ShipCreateCriticalDamage"}}'
+                <a class="feature-control-add-widget shipItem-create" title='{{localize "YZEVERETENO.ShipCreateCriticalDamage"}}'
                     {{#each criticalDamages.dataset as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                    <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                    <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                 </a>
             </div>
             {{/if}}
@@ -22,10 +22,10 @@
                     <span class="flexrow">{{critDamage.name}}</span>
                 </div>
                 <div class="feature-controls">
-                    <a class="edit-widget faded shipItem-edit" title="{{localize "YZEvereteno.ShipEditCriticalDamage"}}" data-feature={{critDamage._id}}><i
+                    <a class="edit-widget faded shipItem-edit" title="{{localize "YZEVERETENO.ShipEditCriticalDamage"}}" data-feature={{critDamage._id}}><i
                             class="fas fa-edit"></i></a>
                     <a class="edit-widget faded shipItem-delete"
-                        title="{{localize "YZEvereteno.ShipDeleteCriticalDamage"}}" data-feature={{critDamage._id}}><i class="fas fa-trash"></i></a>
+                        title="{{localize "YZEVERETENO.ShipDeleteCriticalDamage"}}" data-feature={{critDamage._id}}><i class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>

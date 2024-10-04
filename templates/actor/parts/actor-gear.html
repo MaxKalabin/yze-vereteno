@@ -3,16 +3,16 @@
         <ol class="gear-list">
             {{!-- setup header for Gear--}}
             <li class="gear-category-header flexrow">
-                <div class="gear-category-name first">{{localize "YZEvereteno.Gear"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Weight"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.TechTier"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Quantity"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Restricted"}}</div>
+                <div class="gear-category-name first">{{localize "YZEVERETENO.Gear"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Weight"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.TechTier"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Quantity"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Restricted"}}</div>
                 {{#if owner}}
                 <div class="gear-controls">
-                    <a class="gear-control-add-widget item-create" title='{{localize "YZEvereteno.CreateGear"}}'
+                    <a class="gear-control-add-widget item-create" title='{{localize "YZEVERETENO.CreateGear"}}'
                         {{#each gearDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                        <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                        <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                     </a>
                 </div>
                 {{/if}}
@@ -44,11 +44,11 @@
                     </div>
                     <div class="gear-controls">
                         <a class="gear-control-widget item-toggle {{gear.system.toggleClass}}"
-                            title='{{localize "YZEvereteno.EquipGear"}}'><i class="fas fa-shield-alt"></i></a>
-                        <a class="gear-control-widget item-edit" title="{{localize "YZEvereteno.EditGear"}}"><i class="fas fa-edit"></i></a>
-                        <a class="gear-control-widget item-post" title="{{localize "YZEvereteno.PostGear"}}"><i
+                            title='{{localize "YZEVERETENO.EquipGear"}}'><i class="fas fa-shield-alt"></i></a>
+                        <a class="gear-control-widget item-edit" title="{{localize "YZEVERETENO.EditGear"}}"><i class="fas fa-edit"></i></a>
+                        <a class="gear-control-widget item-post" title="{{localize "YZEVERETENO.PostGear"}}"><i
                             class="fas fa-comment"></i></a>
-                        <a class="gear-control-widget item-delete" title="{{localize "YZEvereteno.DeleteGear"}}"><i class="fas fa-trash"></i></a>
+                        <a class="gear-control-widget item-delete" title="{{localize "YZEVERETENO.DeleteGear"}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>
@@ -56,18 +56,18 @@
 
             {{!-- setup header for Weapons--}}
             <li class="gear-category-header flexrow">
-                <div class="gear-category-name first">{{localize "YZEvereteno.Weapons"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Bonus"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Initiative"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Damage"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Crit"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Range"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Automatic"}}</div>
+                <div class="gear-category-name first">{{localize "YZEVERETENO.Weapons"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Bonus"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Initiative"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Damage"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Crit"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Range"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Automatic"}}</div>
                 {{#if owner}}
                 <div class="gear-controls">
-                    <a class="gear-control-add-widget item-create" title='{{localize "YZEvereteno.CreateWeapon"}}'
+                    <a class="gear-control-add-widget item-create" title='{{localize "YZEVERETENO.CreateWeapon"}}'
                         {{#each weaponDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                        <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                        <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                     </a>
                 </div>
                 {{/if}}
@@ -114,12 +114,12 @@
 
                     <div class="gear-controls">
                         <a class="gear-control-widget item-toggle {{weapon.system.toggleClass}}"
-                            title='{{localize "YZEvereteno.EquipWeapon"}}'><i class="fas fa-shield-alt"></i></a>
-                        <a class="gear-control-widget item-edit" title="{{localize "YZEvereteno.EditWeapon"}}"><i
+                            title='{{localize "YZEVERETENO.EquipWeapon"}}'><i class="fas fa-shield-alt"></i></a>
+                        <a class="gear-control-widget item-edit" title="{{localize "YZEVERETENO.EditWeapon"}}"><i
                                 class="fas fa-edit"></i></a>
-                        <a class="gear-control-widget item-post" title="{{localize "YZEvereteno.PostWeapon"}}"><i
+                        <a class="gear-control-widget item-post" title="{{localize "YZEVERETENO.PostWeapon"}}"><i
                             class="fas fa-comment"></i></a>
-                        <a class="gear-control-widget item-delete" title="{{localize "YZEvereteno.DeleteWeapon"}}"><i
+                        <a class="gear-control-widget item-delete" title="{{localize "YZEVERETENO.DeleteWeapon"}}"><i
                                 class="fas fa-trash"></i></a>
                     </div>
                 </div>
@@ -141,18 +141,18 @@
 
             {{!-- setup header for Explosives--}}
             <li class="gear-category-header flexrow">
-                <div class="gear-category-name first">{{localize "YZEvereteno.Explosives"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Bonus"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Initiative"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Damage"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Crit"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.BlastPower"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.BlastRadius"}}</div>
+                <div class="gear-category-name first">{{localize "YZEVERETENO.Explosives"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Bonus"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Initiative"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Damage"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Crit"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.BlastPower"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.BlastRadius"}}</div>
                 {{#if owner}}
                 <div class="gear-controls">
-                    <a class="gear-control-add-widget item-create" title='{{localize "YZEvereteno.CreateExplosive"}}'
+                    <a class="gear-control-add-widget item-create" title='{{localize "YZEVERETENO.CreateExplosive"}}'
                         {{#each explosiveDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                        <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                        <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                     </a>
                 </div>
                 {{/if}}
@@ -190,12 +190,12 @@
 
                     <div class="gear-controls">
                         <a class="gear-control-widget item-toggle {{explosive.system.toggleClass}}"
-                            title='{{localize "YZEvereteno.EquipGear"}}'><i class="fas fa-shield-alt"></i></a>
-                        <a class="gear-control-widget item-edit" title="{{localize "YZEvereteno.EditExplosive"}}"><i
+                            title='{{localize "YZEVERETENO.EquipGear"}}'><i class="fas fa-shield-alt"></i></a>
+                        <a class="gear-control-widget item-edit" title="{{localize "YZEVERETENO.EditExplosive"}}"><i
                                 class="fas fa-edit"></i></a>
-                        <a class="gear-control-widget item-post" title="{{localize "YZEvereteno.PostExplosive"}}"><i
+                        <a class="gear-control-widget item-post" title="{{localize "YZEVERETENO.PostExplosive"}}"><i
                             class="fas fa-comment"></i></a>
-                        <a class="gear-control-widget item-delete" title="{{localize "YZEvereteno.DeleteExplosive"}}"><i
+                        <a class="gear-control-widget item-delete" title="{{localize "YZEVERETENO.DeleteExplosive"}}"><i
                                 class="fas fa-trash"></i></a>
                     </div>
                 </div>
@@ -218,14 +218,14 @@
 
             {{!-- setup header for Armor--}}
             <li class="gear-category-header flexrow">
-                <div class="gear-category-name first">{{localize "YZEvereteno.Armor"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.ArmorRating"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.ExtraFeatures"}}</div>
+                <div class="gear-category-name first">{{localize "YZEVERETENO.Armor"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.ArmorRating"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.ExtraFeatures"}}</div>
                 {{#if owner}}
                 <div class="gear-controls">
-                    <a class="gear-control-add-widget item-create" title='{{localize "YZEvereteno.CreateArmor"}}'
+                    <a class="gear-control-add-widget item-create" title='{{localize "YZEVERETENO.CreateArmor"}}'
                         {{#each armorDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                        <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                        <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                     </a>
                 </div>
                 {{/if}}
@@ -248,12 +248,12 @@
 
                     <div class="gear-controls">
                         <a class="gear-control-widget item-toggle {{armor.system.toggleClass}}"
-                            title='{{localize "YZEvereteno.EquipArmor"}}'><i class="fas fa-shield-alt"></i></a>
-                        <a class="gear-control-widget item-edit" title="{{localize "YZEvereteno.EditArmor"}}"><i
+                            title='{{localize "YZEVERETENO.EquipArmor"}}'><i class="fas fa-shield-alt"></i></a>
+                        <a class="gear-control-widget item-edit" title="{{localize "YZEVERETENO.EditArmor"}}"><i
                             class="fas fa-edit"></i></a>
-                        <a class="gear-control-widget item-post" title="{{localize "YZEvereteno.PostArmor"}}"><i
+                        <a class="gear-control-widget item-post" title="{{localize "YZEVERETENO.PostArmor"}}"><i
                             class="fas fa-comment"></i></a>
-                        <a class="gear-control-widget item-delete" title="{{localize "YZEvereteno.DeleteArmor"}}"><i
+                        <a class="gear-control-widget item-delete" title="{{localize "YZEVERETENO.DeleteArmor"}}"><i
                             class="fas fa-trash"></i></a>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
         <div class="encumbrance-bar {{#if encumbered}}encumbered{{/if}}">
             <div class="encumbrance-fill  {{#if encumbered}}encumbered{{/if}}" style="width:{{percentage}}%"></div>
             <div class="encumbrance-data">
-                <span class="encumbrance-label">{{localize "YZEvereteno.Encumbrance"}}: {{value}} / {{max}}</span>
+                <span class="encumbrance-label">{{localize "YZEVERETENO.Encumbrance"}}: {{value}} / {{max}}</span>
             </div>
         </div>
         {{/with}}

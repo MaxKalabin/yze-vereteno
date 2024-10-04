@@ -1,4 +1,4 @@
-<div class="dice-roll yzecoriolis">
+<div class="dice-roll YZEVERETENO">
   <div>
     <h2 style="white-space: pre-wrap;">{{title}}</h2>
     <table style="border: 0;">
@@ -7,25 +7,25 @@
         {{#if_eq actorType 'character'}}
           {{#if_eq rollType 'weapon'}}
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
             </tr>
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
             </tr>
             {{#if_eq isExplosive 'true'}}
               <tr>
-                <td>{{localize "YZECORIOLIS.BlastPower"}}: {{blastPower}}</td>
-                <td>{{localize "YZECORIOLIS.BlastRadius"}}: {{blastRadius}}</td>
+                <td>{{localize "YZEVERETENO.BlastPower"}}: {{blastPower}}</td>
+                <td>{{localize "YZEVERETENO.BlastRadius"}}: {{blastRadius}}</td>
               </tr>
             {{else}}
               <tr>
-                <td>{{localize "YZECORIOLIS.Range"}}: {{range}}</td>
-                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZECORIOLIS.Automatic"}}-{{localize "YZECORIOLIS.Weapon"}}{{/if_eq}}</td>
+                <td>{{localize "YZEVERETENO.Range"}}: {{range}}</td>
+                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZEVERETENO.Automatic"}}-{{localize "YZEVERETENO.Weapon"}}{{/if_eq}}</td>
               </tr>
             {{/if_eq}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
             {{/if}}
             <tr>
@@ -35,7 +35,7 @@
           {{#if_eq rollType 'armor'}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
               <tr>
                 <td colspan="2"><hr></td>
@@ -44,19 +44,19 @@
           {{/if_eq}}
           <tr>
           {{#if_eq rollType 'armor'}}
-            <td>{{localize "YZECORIOLIS.ArmorRating"}}: {{bonus}}</td>
+            <td>{{localize "YZEVERETENO.ArmorRating"}}: {{bonus}}</td>
           {{else}}
             <td>{{attributeName}}: {{attribute}}</td>
             <td>{{#if skillName}}{{skillName}}: {{skill}}{{/if}}</td>
           {{/if_eq}}
           </tr>
           <tr>
-            <td>{{localize "YZECORIOLIS.ModifierForRoll"}}: {{modifier}}</td>
-            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZECORIOLIS.Bonus"}}: {{bonus}}{{/if_eq}}</td>
+            <td>{{localize "YZEVERETENO.ModifierForRoll"}}: {{modifier}}</td>
+            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZEVERETENO.Bonus"}}: {{bonus}}{{/if_eq}}</td>
           </tr>
           {{#if itemModifiersChecked}}
             <tr>
-              <td style="vertical-align: top;">{{localize "YZECORIOLIS.ItemModifiersOther"}}:</td>
+              <td style="vertical-align: top;">{{localize "YZEVERETENO.ItemModifiersOther"}}:</td>
               <td style="white-space: pre-wrap;">{{itemModifiersChecked}}</td>
             </tr>
           {{/if}}
@@ -66,25 +66,25 @@
         {{#if_eq actorType 'npc'}}
           {{#if_eq rollType 'weapon'}}
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
             </tr>
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
             </tr>
             {{#if_eq isExplosive 'true'}}
               <tr>
-                <td>{{localize "YZECORIOLIS.BlastPower"}}: {{blastPower}}</td>
-                <td>{{localize "YZECORIOLIS.BlastRadius"}}: {{blastRadius}}</td>
+                <td>{{localize "YZEVERETENO.BlastPower"}}: {{blastPower}}</td>
+                <td>{{localize "YZEVERETENO.BlastRadius"}}: {{blastRadius}}</td>
               </tr>
             {{else}}
               <tr>
-                <td>{{localize "YZECORIOLIS.Range"}}: {{range}}</td>
-                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZECORIOLIS.Automatic"}}-{{localize "YZECORIOLIS.Weapon"}}{{/if_eq}}</td>
+                <td>{{localize "YZEVERETENO.Range"}}: {{range}}</td>
+                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZEVERETENO.Automatic"}}-{{localize "YZEVERETENO.Weapon"}}{{/if_eq}}</td>
               </tr>
             {{/if_eq}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
             {{/if}}
             <tr>
@@ -94,7 +94,7 @@
           {{#if_eq rollType 'armor'}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
               <tr>
                 <td colspan="2"><hr></td>
@@ -103,19 +103,19 @@
           {{/if_eq}}
           <tr>
           {{#if_eq rollType 'armor'}}
-            <td>{{localize "YZECORIOLIS.ArmorRating"}}: {{bonus}}</td>
+            <td>{{localize "YZEVERETENO.ArmorRating"}}: {{bonus}}</td>
           {{else}}
             <td>{{attributeName}}: {{attribute}}</td>
             <td>{{#if skillName}}{{skillName}}: {{skill}}{{/if}}</td>
           {{/if_eq}}
           </tr>
           <tr>
-            <td>{{localize "YZECORIOLIS.ModifierForRoll"}}: {{modifier}}</td>
-            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZECORIOLIS.Bonus"}}: {{bonus}}{{/if_eq}}</td>
+            <td>{{localize "YZEVERETENO.ModifierForRoll"}}: {{modifier}}</td>
+            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZEVERETENO.Bonus"}}: {{bonus}}{{/if_eq}}</td>
           </tr>
           {{#if itemModifiersChecked}}
             <tr>
-              <td style="vertical-align: top;">{{localize "YZECORIOLIS.ItemModifiersOther"}}:</td>
+              <td style="vertical-align: top;">{{localize "YZEVERETENO.ItemModifiersOther"}}:</td>
               <td style="white-space: pre-wrap;">{{itemModifiersChecked}}</td>
             </tr>
           {{/if}}
@@ -124,25 +124,25 @@
       {{else if_eq (AdditionalRollInfos) 'all'}}
           {{#if_eq rollType 'weapon'}}
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Damage"}}: {{damage}} {{#if damageText}}({{damageText}}){{/if}}</td>
             </tr>
             <tr>
-              <td colspan="2">{{localize "YZECORIOLIS.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
+              <td colspan="2">{{localize "YZEVERETENO.Crit"}}: {{#if_gt crit 0}}{{crit}}{{else}}-{{/if_gt}} {{#if critText}}({{critText}}){{/if}}</td>
             </tr>
             {{#if_eq isExplosive 'true'}}
               <tr>
-                <td>{{localize "YZECORIOLIS.BlastPower"}}: {{blastPower}}</td>
-                <td>{{localize "YZECORIOLIS.BlastRadius"}}: {{blastRadius}}</td>
+                <td>{{localize "YZEVERETENO.BlastPower"}}: {{blastPower}}</td>
+                <td>{{localize "YZEVERETENO.BlastRadius"}}: {{blastRadius}}</td>
               </tr>
             {{else}}
               <tr>
-                <td>{{localize "YZECORIOLIS.Range"}}: {{range}}</td>
-                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZECORIOLIS.Automatic"}}-{{localize "YZECORIOLIS.Weapon"}}{{/if_eq}}</td>
+                <td>{{localize "YZEVERETENO.Range"}}: {{range}}</td>
+                <td>{{#if_eq isAutomatic 'true'}}{{localize "YZEVERETENO.Automatic"}}-{{localize "YZEVERETENO.Weapon"}}{{/if_eq}}</td>
               </tr>
             {{/if_eq}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
             {{/if}}
             <tr>
@@ -152,7 +152,7 @@
           {{#if_eq rollType 'armor'}}
             {{#if features}}
               <tr>
-                <td colspan="2">{{localize "YZECORIOLIS.Features"}}: {{features}}</td>
+                <td colspan="2">{{localize "YZEVERETENO.Features"}}: {{features}}</td>
               </tr>
               <tr>
                 <td colspan="2"><hr></td>
@@ -161,19 +161,19 @@
           {{/if_eq}}
           <tr>
           {{#if_eq rollType 'armor'}}
-            <td>{{localize "YZECORIOLIS.ArmorRating"}}: {{bonus}}</td>
+            <td>{{localize "YZEVERETENO.ArmorRating"}}: {{bonus}}</td>
           {{else}}
             <td>{{attributeName}}: {{attribute}}</td>
             <td>{{#if skillName}}{{skillName}}: {{skill}}{{/if}}</td>
           {{/if_eq}}
           </tr>
           <tr>
-            <td>{{localize "YZECORIOLIS.ModifierForRoll"}}: {{modifier}}</td>
-            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZECORIOLIS.Bonus"}}: {{bonus}}{{/if_eq}}</td>
+            <td>{{localize "YZEVERETENO.ModifierForRoll"}}: {{modifier}}</td>
+            <td>{{#if_eq rollType 'armor'}}{{else if_eq rollType 'attribute'}}{{else if_eq rollType 'general'}}{{else if_eq rollType 'advanced'}}{{else}}{{localize "YZEVERETENO.Bonus"}}: {{bonus}}{{/if_eq}}</td>
           </tr>
           {{#if itemModifiersChecked}}
             <tr>
-              <td style="vertical-align: top;">{{localize "YZECORIOLIS.ItemModifiersOther"}}:</td>
+              <td style="vertical-align: top;">{{localize "YZEVERETENO.ItemModifiersOther"}}:</td>
               <td style="white-space: pre-wrap;">{{itemModifiersChecked}}</td>
             </tr>
           {{/if}}
@@ -182,15 +182,15 @@
       <tr>
         <td colspan="2">
         {{#if_gt totalDice 0}}
-          <strong>{{localize "YZECORIOLIS.RollTotal"}}:</strong> {{totalDice}}d6
-          {{#if_eq isAutomaticActive 'true'}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ {{localize "YZECORIOLIS.AutomaticFire"}}
-          {{#if_gt results.rollData.machineGunner 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZECORIOLIS.Talent"}} {{localize "YZECORIOLIS.TalentMachinegunner"}}{{/if_gt}}
-          {{#if_gt results.rollData.highCapacity 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZECORIOLIS.Weapon"}} {{localize "YZECORIOLIS.FeatureWeaponHighCapacity"}}{{/if_gt}}{{/if_eq}}
+          <strong>{{localize "YZEVERETENO.RollTotal"}}:</strong> {{totalDice}}d20
+          {{#if_eq isAutomaticActive 'true'}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ {{localize "YZEVERETENO.AutomaticFire"}}
+          {{#if_gt results.rollData.machineGunner 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZEVERETENO.Talent"}} {{localize "YZEVERETENO.TalentMachinegunner"}}{{/if_gt}}
+          {{#if_gt results.rollData.highCapacity 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZEVERETENO.Weapon"}} {{localize "YZEVERETENO.FeatureWeaponHighCapacity"}}{{/if_gt}}{{/if_eq}}
         {{else}}
-          <strong>{{localize "YZECORIOLIS.RollTotal"}}:</strong> {{localize "YZECORIOLIS.RollSubstitute"}} {{totalDice}}d6
-          {{#if_eq isAutomaticActive 'true'}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ {{localize "YZECORIOLIS.AutomaticFire"}}
-          {{#if_gt results.rollData.machineGunner 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZECORIOLIS.Talent"}} {{localize "YZECORIOLIS.TalentMachinegunner"}}{{/if_gt}}
-          {{#if_gt results.rollData.highCapacity 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZECORIOLIS.Weapon"}} {{localize "YZECORIOLIS.FeatureWeaponHighCapacity"}}{{/if_gt}}{{/if_eq}}
+          <strong>{{localize "YZEVERETENO.RollTotal"}}:</strong> {{localize "YZEVERETENO.RollSubstitute"}} {{totalDice}}d20
+          {{#if_eq isAutomaticActive 'true'}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;+ {{localize "YZEVERETENO.AutomaticFire"}}
+          {{#if_gt results.rollData.machineGunner 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZEVERETENO.Talent"}} {{localize "YZEVERETENO.TalentMachinegunner"}}{{/if_gt}}
+          {{#if_gt results.rollData.highCapacity 0}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;& {{localize "YZEVERETENO.Weapon"}} {{localize "YZEVERETENO.FeatureWeaponHighCapacity"}}{{/if_gt}}{{/if_eq}}
         {{/if_gt}}
         </td>
       </tr>
@@ -198,27 +198,27 @@
     </div>
     <div class="dice-result">
         {{#if results.limitedSuccess}}
-        <h4 class="dice-total limitedSuccess">{{localize "YZECORIOLIS.RollLimitedSucces"}} ({{results.successes}})</h4>
+        <h4 class="dice-total limitedSuccess">{{localize "YZEVERETENO.RollLimitedSucces"}} ({{results.successes}})</h4>
         {{/if}}
         {{#if results.failure}}
-        <h4 class="dice-total criticalfailure">{{localize "YZECORIOLIS.RollFailure"}}</h4>
+        <h4 class="dice-total criticalfailure">{{localize "YZEVERETENO.RollFailure"}}</h4>
         {{/if}}
         {{#if results.criticalSuccess}}
-        <h4 class="dice-total criticalSuccess">{{localize "YZECORIOLIS.RollCriticalSucces"}} ({{results.successes}})</h4>
+        <h4 class="dice-total criticalSuccess">{{localize "YZEVERETENO.RollCriticalSucces"}} ({{results.successes}})</h4>
         {{/if}}
         {{{tooltip}}}
         {{#if canPush}}
-        <div class="dice-formula dice-push yzevereteno">
+        <div class="dice-formula dice-push YZEVERETENO">
             <a>
-                <span>{{localize "YZECORIOLIS.PrayToIcons"}}</span>
-                {{#if icon}}
-                <span> - {{icon}}</span>
+                <span>{{localize "YZEVERETENO.PrayToGods"}}</span>
+                {{#if god}}
+                <span> - {{god}}</span>
                 {{/if}}
             </a>
         </div>
         {{else}}
-        <div class="dice-formula dice-push yzevereteno">
-            <em>{{localize "YZECORIOLIS.PushedRoll"}}</em>
+        <div class="dice-formula dice-push YZEVERETENO">
+            <em>{{localize "YZEVERETENO.PushedRoll"}}</em>
             {{#if prayerBonus}}
               <em> (+{{prayerBonus}})</em>
             {{/if}}

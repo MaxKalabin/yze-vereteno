@@ -8,7 +8,7 @@ const YZEVERETENO_LESS = ["less/**/*.less", "less/*.less"];
 
 function compileLESS() {
   return gulp
-    .src(["less/yzevereteno.less", "less/yzeveretenomce.less"])
+    .src(["less/YZEVERETENO.less", "less/YZEVERETENOmce.less"])
     .pipe(less())
     .pipe(gulp.dest("./css"));
 }

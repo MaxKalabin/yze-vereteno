@@ -3,11 +3,11 @@ import { getID } from "../util.js";
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class yzeveretenoItemSheet extends ItemSheet {
+export class YZEVERETENOItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["yzevereteno", "sheet", "item"],
+      classes: ["YZEVERETENO", "sheet", "item"],
       width: 770,
       height: 770,
       tabs: [
@@ -22,7 +22,7 @@ export class yzeveretenoItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/yzevereteno/templates/item";
+    const path = "systems/YZEVERETENO/templates/item";
     // Return a single sheet for all item types.
     //return `${path}/item-sheet.html`;
     // Alternatively, you could use the following return statement to do a
@@ -45,7 +45,7 @@ export class yzeveretenoItemSheet extends ItemSheet {
     const sheetData = {
       editable: baseData.editable,
       owner: baseData.item.isOwner,
-      config: CONFIG.YZEvereteno,
+      config: CONFIG.YZEVERETENO,
       itemDescript,
       ...baseData.item,
     };
@@ -77,7 +77,7 @@ export class yzeveretenoItemSheet extends ItemSheet {
     html.find(".feature-create").click(this._onFeatureCreate.bind(this));
     html.find(".itemModifier-create").click(this._onItemModifierCreate.bind(this));
 
-    // // Delete Inventory Item or Modifier
+    // // Удалить Inventory Item or Modifier
     html.find(".feature-delete").click(this._onFeatureDelete.bind(this));
     html.find(".itemModifier-delete").click(this._onItemModifierDelete.bind(this));
   }

@@ -1,12 +1,12 @@
 import { addDarknessPoints } from "./darkness-points.js";
-import { getDefaultItemIcon } from "./item/item.js";
+import { getDefaultItemGod } from "./item/item.js";
 /**
  * Perform a system migration for the entire World, applying migrations for Actors, Items, and Compendium packs
  * @return {Promise}      A Promise which resolves once the migration is completed
  */
 export const migrateWorld = async function () {
   ui.notifications.info(
-    `Applying Coriolis System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`,
+    `Applying vereteno System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`,
     { permanent: true }
   );
 
@@ -64,12 +64,12 @@ export const migrateWorld = async function () {
 
   // Set the migration as complete
   await game.settings.set(
-    "yzecoriolis",
+    "YZEVERETENO",
     "systemMigrationVersion",
     game.system.version
   );
   ui.notifications.info(
-    `Coriolis System Migration to version ${game.system.version} completed!`,
+    `vereteno System Migration to version ${game.system.version} completed!`,
     { permanent: true }
   );
 };
@@ -89,7 +89,7 @@ export const bootstrapTalentCompendium = async function () {
   });
 
   // Load an external JSON data file which contains data for import
-  const response = await fetch("worlds/dev-coriolis/talent-import.json");
+  const response = await fetch("worlds/dev-vereteno/talent-import.json");
   const content = await response.json();
 
   const tempItems = await Item.create(content, { temporary: true });
@@ -102,8 +102,8 @@ export const bootstrapTalentCompendium = async function () {
 export const bootstrapGearCompendium = async function () {
   //await importEveryDayItemsCompendium("Everyday Items", "everyday-items");
   await importEveryDayItemsCompendium(
-    "Medicurgical Technology",
-    "medicurgical-technology"
+    "Medicurgical Mechanic",
+    "medicurgical-mechanic"
   );
   await importEveryDayItemsCompendium(
     "Tools And Spare Parts",
@@ -115,10 +115,10 @@ export const bootstrapGearCompendium = async function () {
   );
   await importEveryDayItemsCompendium("Exos and Vehicles", "exos-and-vehicles");
   await importEveryDayItemsCompendium(
-    "Recon and Infiltration",
-    "recon-and-infiltration"
+    "Recon and Stealth",
+    "recon-and-stealth"
   );
-  await importEveryDayItemsCompendium("Combat Gear", "combat-gear");
+  await importEveryDayItemsCompendium("Combat Вещи", "combat-gear");
 };
 
 const importEveryDayItemsCompendium = async function (
@@ -128,7 +128,7 @@ const importEveryDayItemsCompendium = async function (
   const targetCompendiumObject = getCompendiumForImport(compendiumName);
   // Load an external JSON data file which contains data for import
   const response = await fetch(
-    "modules/coriolis-core-compendiums/imports/import-coriolis-core-compendium-gear.json"
+    "modules/vereteno-core-compendiums/imports/import-vereteno-core-compendium-gear.json"
   );
   const content = await response.json();
   const gearArray = content[contentKey];
@@ -267,19 +267,19 @@ export const migrateItemData = function (item) {
   let updateData = {};
 
   const itemType = item.type;
-  const isUsingDefaultIcon = [
-    "icons/svg/item-bag.svg",
+  const isUsingDefaultGod = [
+    "gods/svg/item-bag.svg",
     CONST.DEFAULT_TOKEN,
   ].includes(item.img);
 
-  const isTypeWithCustomIcon =
+  const isTypeWithCustomGod =
     itemType === "weapon" ||
     itemType === "armor" ||
     itemType === "gear" ||
     itemType === "talent" ||
     itemType === "injury";
-  if (isUsingDefaultIcon && isTypeWithCustomIcon) {
-    updateData = { img: getDefaultItemIcon(itemType, !!item.system.explosive) };
+  if (isUsingDefaultGod && isTypeWithCustomGod) {
+    updateData = { img: getDefaultItemGod(itemType, !!item.system.explosive) };
   }
   // Return the migrated update data
   return updateData;
@@ -314,11 +314,11 @@ const migrateDarknessPoints = async function () {
   if (!game.user.isGM) {
     return;
   }
-  let dpPoints = game.settings.get("yzecoriolis", "darknessPoints");
+  let dpPoints = game.settings.get("YZEVERETENO", "darknessPoints");
   const MIGRATED_VALUE = -42;
   if (dpPoints !== MIGRATED_VALUE) {
     await addDarknessPoints(dpPoints);
-    await game.settings.set("yzecoriolis", "darknessPoints", MIGRATED_VALUE);
+    await game.settings.set("YZEVERETENO", "darknessPoints", MIGRATED_VALUE);
   }
 };
 

@@ -2,7 +2,7 @@
 @import "less/utils/vereteno.less";
 @import "less/utils/databar.less";
 
-.yzevereteno.sheet.actor.character {
+.YZEVERETENO.sheet.actor.character {
 
   /*
     Background & Container
@@ -13,7 +13,7 @@
   }
 }
 
-.yzevereteno.sheet.actor.ship {
+.YZEVERETENO.sheet.actor.ship {
   .window-content {
     background: url("images/ship-sheet-bg.jpg");
     background-size: cover;
@@ -46,7 +46,7 @@
   }
 }
 
-.yzevereteno.sheet.actor {
+.YZEVERETENO.sheet.actor {
 
   /*
     mixins
@@ -372,13 +372,13 @@
     justify-content: flex-end;
   }
 
-  .item-status-icon {
+  .item-status-god {
     color: @colorDarkBlue;
     flex-basis: 20px;
   }
 
   .item-control-widget {
-    .item-status-icon();
+    .item-status-god();
     .hover-header-buttons();
   }
 
@@ -554,19 +554,19 @@
       }
 
       .bg-wits {
-        .bg-attr("icons/icon-wits-bg.svg");
+        .bg-attr("gods/god-wits-bg.svg");
       }
 
       .bg-strength {
-        .bg-attr("icons/icon-strength-bg.svg");
+        .bg-attr("gods/god-strength-bg.svg");
       }
 
       .bg-empathy {
-        .bg-attr("icons/icon-empathy-bg.svg");
+        .bg-attr("gods/god-empathy-bg.svg");
       }
 
       .bg-agility {
-        .bg-attr("icons/icon-agility-bg.svg");
+        .bg-attr("gods/god-agility-bg.svg");
       }
 
       .attr-num-display {
@@ -637,7 +637,7 @@
 
             // we trigger this here so we have a bigger hit area
             .skill-image {
-              background-image: url("icons/rolling-dices.svg");
+              background-image: url("gods/rolling-dices.svg");
               background-size: 30px;
             }
           }
@@ -672,23 +672,23 @@
 
         .bg-skill-wits {
           .attr-tag-helper();
-          .bg-attr("icons/skill-tag-wits.svg");
+          .bg-attr("gods/skill-tag-wits.svg");
         }
 
         .bg-skill-strength {
           .attr-tag-helper();
-          .bg-attr("icons/skill-tag-strength.svg");
+          .bg-attr("gods/skill-tag-strength.svg");
           background-size: 20px;
         }
 
         .bg-skill-empathy {
           .attr-tag-helper();
-          .bg-attr("icons/skill-tag-empathy.svg");
+          .bg-attr("gods/skill-tag-empathy.svg");
         }
 
         .bg-skill-agility {
           .attr-tag-helper();
-          .bg-attr("icons/skill-tag-agility.svg");
+          .bg-attr("gods/skill-tag-agility.svg");
         }
 
         .skill-value-display {
@@ -953,7 +953,7 @@
       }
 
       .gear-restricted {
-        .item-status-icon();
+        .item-status-god();
       }
 
       .gear {
@@ -1026,7 +1026,7 @@
           transition: background-image 275ms ease, transform 275ms ease;
 
           &:hover {
-            background-image: url("icons/rolling-dices-orange.svg") !important;
+            background-image: url("gods/rolling-dices-orange.svg") !important;
             transform: scale(1.05);
           }
         }
@@ -1110,7 +1110,7 @@
         -moz-appearance: none;
         appearance: none;
         background-color: none;
-        background: url("icons/checkbox-unchecked.svg") center no-repeat;
+        background: url("gods/checkbox-unchecked.svg") center no-repeat;
         background-size: 21px;
         width: 22px;
         transition: background-color 275ms ease;
@@ -1121,7 +1121,7 @@
         }
 
         &:checked {
-          background: url("icons/checkbox-checked.svg") center no-repeat;
+          background: url("gods/checkbox-checked.svg") center no-repeat;
           background-size: 21px;
         }
       }
@@ -1157,7 +1157,7 @@
           padding: 0px 35px 0px 10px;
 
           border: none;
-          background: url("icons/drop-down-arrow.svg") 96% / 15% no-repeat @colorBlueTransparent;
+          background: url("gods/drop-down-arrow.svg") 96% / 15% no-repeat @colorBlueTransparent;
           background-position: right 0.7em top 50%;
 
           &:focus {
@@ -1293,7 +1293,7 @@
         position: relative;
         top: -20px;
         background-repeat: no-repeat;
-        background-image: url("icons/roll-glow.svg");
+        background-image: url("gods/roll-glow.svg");
         background-position: center center;
         background-size: contain;
         transform: scale(2.5);
@@ -1502,7 +1502,7 @@
       }
       
       .weapon-img-container.rollable:hover {
-        background-image: url("icons/rolling-dices-orange.svg") !important;
+        background-image: url("gods/rolling-dices-orange.svg") !important;
         transform: scale(1.05);
       }
     

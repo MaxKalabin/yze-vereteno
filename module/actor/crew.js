@@ -25,8 +25,8 @@ export function buildCrewOptionsArray() {
 
   let options = [];
   // options for without a ship association
-  let baseOptions = Object.keys(CONFIG.YZEvereteno.crewPositions).map((c) => {
-    return createOption(CONFIG.YZEvereteno.crewPositions[c], c, "");
+  let baseOptions = Object.keys(CONFIG.YZEVERETENO.crewPositions).map((c) => {
+    return createOption(CONFIG.YZEVERETENO.crewPositions[c], c, "");
   });
 
   options.push(...baseOptions);

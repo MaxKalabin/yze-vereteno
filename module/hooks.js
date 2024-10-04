@@ -7,8 +7,8 @@ Hooks.on("updateUser", (entity, delta, options, userId) => {
   // we avoid any null sets because we are just doing a clearing of the flag
   // before setting it to a valid value.
   const isSettingDP =
-    hasProperty(delta, "flags.yzevereteno.darknessPoints") &&
-    delta.flags.yzevereteno.darknessPoints !== null;
+    hasProperty(delta, "flags.YZEVERETENO.darknessPoints") &&
+    delta.flags.YZEVERETENO.darknessPoints !== null;
 
   if (options.diff && isSettingDP) {
     if (game.user.isGM) {
@@ -93,7 +93,7 @@ function rerenderAllShips() {
 }
 
 async function createEPTokensForShip(entity) {
-  await createBlankEPTokens(entity, CONFIG.YZEvereteno.MaxEPTokensPerShip);
+  await createBlankEPTokens(entity, CONFIG.YZEVERETENO.MaxEPTokensPerShip);
 }
 
 // setMaxEPTokensActive sets maxEnergyPoints worth of EP tokens active for the

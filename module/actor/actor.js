@@ -6,7 +6,7 @@ import {
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class yzeveretenoActor extends Actor {
+export class YZEVERETENOActor extends Actor {
   /**
    * Augment the basic actor data with additional dynamic data.
    */
@@ -30,7 +30,7 @@ export class yzeveretenoActor extends Actor {
       ((hasProperty(initData, "img") && initData.img === Actor.DEFAULT_ICON) ||
         !hasProperty(initData, "img"))
     ) {
-      this.updateSource({ img: CONFIG.YZEvereteno.DEFAULT_SHIP_KEY_ART });
+      this.updateSource({ img: CONFIG.YZEVERETENO.DEFAULT_SHIP_KEY_ART });
     }
 
     // we check the incoming data to make sure we aren't overriding a 'cloning'
@@ -40,10 +40,10 @@ export class yzeveretenoActor extends Actor {
       (initData.type === "character" || initData.type === "npc")
     ) {
       this.updateSource({
-        img: CONFIG.YZEvereteno.DEFAULT_PLAYER_KEY_ART,
+        img: CONFIG.YZEVERETENO.DEFAULT_PLAYER_KEY_ART,
         prototypeToken: {
           texture: {
-            src: CONFIG.YZEvereteno.DEFAULT_PLAYER_KEY_ART_TOKEN,
+            src: CONFIG.YZEVERETENO.DEFAULT_PLAYER_KEY_ART_TOKEN,
           },
         },
       });
@@ -132,20 +132,20 @@ export class yzeveretenoActor extends Actor {
       empathy: {},
       dexterity: {},
       force: {},
-      infiltration: {},
+      stealth: {},
       manipulation: {},
       meleecombat: {},
       observation: {},
       rangedcombat: {},
       survival: {},
-      command: {},
+      lidership: {},
       culture: {},
-      datadjinn: {},
-      medicurgy: {},
-      mysticpowers: {},
+      cybershaman: {},
+      znaharstvo: {},
+      vedovstvo: {},
       pilot: {},
       science: {},
-      technology: {},
+      mechanic: {},
       armor: {},
     };
     for (let item of this.items) {
@@ -155,9 +155,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.strength[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrStrength"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrStrength"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -165,9 +165,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.force[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrStrength"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrStrength"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -175,9 +175,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.meleecombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrStrength"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrStrength"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -187,9 +187,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.force[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrStrength"),
-            skill: game.i18n.localize("YZEvereteno.SkillForce"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrStrength"),
+            skill: game.i18n.localize("YZEVERETENO.SkillForce"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -199,9 +199,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.meleecombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrStrength"),
-            skill: game.i18n.localize("YZEvereteno.SkillMeleeCombat"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrStrength"),
+            skill: game.i18n.localize("YZEVERETENO.SkillMeleeCombat"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -212,9 +212,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.agility[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -222,19 +222,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.dexterity[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -242,9 +242,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.rangedcombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -252,9 +252,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.pilot[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -264,21 +264,21 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.dexterity[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
-            skill: game.i18n.localize("YZEvereteno.SkillDexterity"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
+            skill: game.i18n.localize("YZEVERETENO.SkillDexterity"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillInf") {
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
-            skill: game.i18n.localize("YZEvereteno.SkillInfiltration"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
+            skill: game.i18n.localize("YZEVERETENO.SkillStealth"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -288,9 +288,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.rangedcombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
-            skill: game.i18n.localize("YZEvereteno.SkillRangedCombat"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
+            skill: game.i18n.localize("YZEVERETENO.SkillRangedCombat"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -300,9 +300,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.pilot[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAgility"),
-            skill: game.i18n.localize("YZEvereteno.SkillPilot"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAgility"),
+            skill: game.i18n.localize("YZEVERETENO.SkillPilot"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -313,9 +313,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.wits[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -323,9 +323,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.observation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -333,29 +333,29 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.survival[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -363,19 +363,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.science[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -385,9 +385,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.observation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillObservation"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillObservation"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -397,33 +397,33 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.survival[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillSurvival"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillSurvival"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillData") {
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillDataDjinn"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillCybershaman"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillMedi") {
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillMedicurgy"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillZnaharstvo"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -433,21 +433,21 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.science[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillScience"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillScience"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillTech") {
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrWits"),
-            skill: game.i18n.localize("YZEvereteno.SkillTechnology"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrWits"),
+            skill: game.i18n.localize("YZEVERETENO.SkillMechanic"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -458,9 +458,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.empathy[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -468,19 +468,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.manipulation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -488,19 +488,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.culture[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -510,21 +510,21 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.manipulation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
-            skill: game.i18n.localize("YZEvereteno.SkillManipulation"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
+            skill: game.i18n.localize("YZEVERETENO.SkillManipulation"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillCom") {
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
-            skill: game.i18n.localize("YZEvereteno.SkillCommand"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
+            skill: game.i18n.localize("YZEVERETENO.SkillLidership"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -534,21 +534,21 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.culture[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
-            skill: game.i18n.localize("YZEvereteno.SkillCulture"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
+            skill: game.i18n.localize("YZEVERETENO.SkillCulture"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
         if (item.system.itemModifiers[key].mod === "itemModifierSkillMys") {
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrEmpathy"),
-            skill: game.i18n.localize("YZEvereteno.SkillMysticPowers"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            attribute: game.i18n.localize("YZEVERETENO.AttrEmpathy"),
+            skill: game.i18n.localize("YZEVERETENO.SkillVedovstvo"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -561,7 +561,7 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -572,9 +572,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.strength[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -582,9 +582,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.agility[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -592,9 +592,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.wits[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -602,9 +602,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.empathy[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -613,9 +613,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.dexterity[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -623,19 +623,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.force[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -643,9 +643,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.manipulation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -653,9 +653,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.meleecombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -663,9 +663,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.observation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -673,9 +673,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.rangedcombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -683,20 +683,20 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.survival[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
           // all attributes - advanced skills
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -704,39 +704,39 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.culture[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -744,9 +744,9 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.pilot[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -754,19 +754,19 @@ export class yzeveretenoActor extends Actor {
           sysData.itemModifiers.science[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
-            attribute: game.i18n.localize("YZEvereteno.AttrAll"),
+            attribute: game.i18n.localize("YZEVERETENO.AttrAll"),
             skill: null,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -781,8 +781,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -791,18 +791,18 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -811,8 +811,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -821,8 +821,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -831,8 +831,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -841,8 +841,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -851,8 +851,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatGeneralAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatGeneralAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -863,12 +863,12 @@ export class yzeveretenoActor extends Actor {
           item.system.itemModifiers[key].mod ===
           "itemModifierSkillCatAdvancedAll"
         ) {
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -877,38 +877,38 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -917,8 +917,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -927,18 +927,18 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.SkillCatAdvancedAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.SkillCatAdvancedAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -951,8 +951,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -961,18 +961,18 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -981,8 +981,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -991,8 +991,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1001,8 +1001,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1011,8 +1011,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1021,19 +1021,19 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
           // all blessings - advanced skills
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1042,38 +1042,38 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1082,8 +1082,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1092,36 +1092,36 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.BlessingsAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.BlessingsAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - messenger
+        // blessing - lada
         if (
           item.system.itemModifiers[key].mod ===
-          "itemModifierBlessingsMessenger"
+          "itemModifierBlessingsLada"
         ) {
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1131,38 +1131,38 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - dancer
+        // blessing - perun
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsDancer"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsPerun"
         ) {
           sysData.itemModifiers.dexterity[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconDancer")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodPerun")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1172,26 +1172,26 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconDancer")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodPerun")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - gambler
+        // blessing - dajbog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsGambler"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsDajbog"
         ) {
           sysData.itemModifiers.observation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconGambler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodDajbog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1201,89 +1201,89 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconGambler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodDajbog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - deckhand
+        // blessing - yrilo
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsDeckhand"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsYrilo"
         ) {
           sysData.itemModifiers.force[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconDeckhand")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodYrilo")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - merchant
+        // blessing - svarog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsMerchant"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsSvarog"
         ) {
           sysData.itemModifiers.manipulation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconMerchant")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodSvarog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - judge
+        // blessing - hors
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsJudge"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsHors"
         ) {
           sysData.itemModifiers.rangedcombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconJudge")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodHors")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconJudge")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodHors")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - traveler
+        // blessing - stribog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierBlessingsTraveler"
+          item.system.itemModifiers[key].mod === "itemModifierBlessingsStribog"
         ) {
           sysData.itemModifiers.survival[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconTraveler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodStribog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1293,9 +1293,9 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconTraveler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodStribog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1304,46 +1304,46 @@ export class yzeveretenoActor extends Actor {
         // blessing - lady of tears
         if (
           item.system.itemModifiers[key].mod ===
-          "itemModifierBlessingsLadyOfTears"
+          "itemModifierBlessingsrod"
         ) {
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconLadyOfTears")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodRod")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
         }
-        // blessing - faceless one
+        // blessing - morena one
         if (
           item.system.itemModifiers[key].mod ===
-          "itemModifierBlessingsFacelessOne"
+          "itemModifierBlessingsMorenaOne"
         ) {
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconFaceless")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodMorena")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Blessing"
-            )}: ${game.i18n.localize("YZEvereteno.IconFaceless")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Blessing"
+            )}: ${game.i18n.localize("YZEVERETENO.GodMorena")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: false,
@@ -1356,8 +1356,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1366,18 +1366,18 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1386,8 +1386,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1396,8 +1396,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1406,8 +1406,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1416,8 +1416,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1426,19 +1426,19 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
           // all prayers - advanced skills
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1447,38 +1447,38 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1487,8 +1487,8 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1497,35 +1497,35 @@ export class yzeveretenoActor extends Actor {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
-            skill: game.i18n.localize("YZEvereteno.PrayersAll"),
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+            skill: game.i18n.localize("YZEVERETENO.PrayersAll"),
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - messenger
+        // prayer - lada
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersMessenger"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersLada"
         ) {
-          sysData.itemModifiers.datadjinn[`${key}|${item._id}`] = {
+          sysData.itemModifiers.cybershaman[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1535,38 +1535,38 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.technology[`${key}|${item._id}`] = {
+          sysData.itemModifiers.mechanic[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconMessenger")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodLada")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - dancer
+        // prayer - perun
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersDancer"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersPerun"
         ) {
           sysData.itemModifiers.dexterity[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconDancer")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodPerun")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1576,26 +1576,26 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconDancer")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodPerun")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - gambler
+        // prayer - dajbog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersGambler"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersDajbog"
         ) {
           sysData.itemModifiers.observation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconGambler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodDajbog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1605,87 +1605,87 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconGambler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodDajbog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - deckhand
+        // prayer - yrilo
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersDeckhand"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersYrilo"
         ) {
           sysData.itemModifiers.force[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconDeckhand")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodYrilo")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - merchant
+        // prayer - svarog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersMerchant"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersSvarog"
         ) {
           sysData.itemModifiers.manipulation[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconMerchant")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodSvarog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - judge
-        if (item.system.itemModifiers[key].mod === "itemModifierPrayersJudge") {
+        // prayer - hors
+        if (item.system.itemModifiers[key].mod === "itemModifierPrayersHors") {
           sysData.itemModifiers.rangedcombat[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconJudge")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodHors")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.command[`${key}|${item._id}`] = {
+          sysData.itemModifiers.lidership[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconJudge")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodHors")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - traveler
+        // prayer - stribog
         if (
-          item.system.itemModifiers[key].mod === "itemModifierPrayersTraveler"
+          item.system.itemModifiers[key].mod === "itemModifierPrayersStribog"
         ) {
           sysData.itemModifiers.survival[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconTraveler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodStribog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1695,9 +1695,9 @@ export class yzeveretenoActor extends Actor {
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconTraveler")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodStribog")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
@@ -1706,46 +1706,46 @@ export class yzeveretenoActor extends Actor {
         // prayer - lady of tears
         if (
           item.system.itemModifiers[key].mod ===
-          "itemModifierPrayersLadyOfTears"
+          "itemModifierPrayersrod"
         ) {
-          sysData.itemModifiers.medicurgy[`${key}|${item._id}`] = {
+          sysData.itemModifiers.znaharstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconLadyOfTears")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodRod")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
         }
-        // prayer - faceless one
+        // prayer - morena one
         if (
           item.system.itemModifiers[key].mod ===
-          "itemModifierPrayersFacelessOne"
+          "itemModifierPrayersMorenaOne"
         ) {
-          sysData.itemModifiers.infiltration[`${key}|${item._id}`] = {
+          sysData.itemModifiers.stealth[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconFaceless")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodMorena")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,
           };
-          sysData.itemModifiers.mysticpowers[`${key}|${item._id}`] = {
+          sysData.itemModifiers.vedovstvo[`${key}|${item._id}`] = {
             id: `${key}|${item._id}`,
             name: item.name,
             attribute: null,
             skill: `${game.i18n.localize(
-              "YZEvereteno.Prayer"
-            )}: ${game.i18n.localize("YZEvereteno.IconFaceless")}`,
-            type: game.i18n.localize(CONFIG.YZEvereteno.itemTypes[item.type]),
+              "YZEVERETENO.Prayer"
+            )}: ${game.i18n.localize("YZEVERETENO.GodMorena")}`,
+            type: game.i18n.localize(CONFIG.YZEVERETENO.itemTypes[item.type]),
             value: item.system.itemModifiers[key].value,
             checked: false,
             prayer: true,

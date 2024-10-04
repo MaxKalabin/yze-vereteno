@@ -1,36 +1,36 @@
 <div class="tab biography" data-group="primary" data-tab="bio">
     <div class="bio-stats">
         <div class="bio-category-header">
-            <span class="bio-category-name">{{localize "YZEvereteno.Background"}}</span>
+            <span class="bio-category-name">{{localize "YZEVERETENO.Background"}}</span>
         </div>
         <div class="bio-block-list flexrow">
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.Origin"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.Origin"}}</span>
                 <input class="bio-input" name="system.bio.origin" type="text" value="{{system.bio.origin}}"
-                    placeholder="{{localize "YZEvereteno.Origin"}}" />
+                    placeholder="{{localize "YZEVERETENO.Origin"}}" />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.Upbringing"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.Upbringing"}}</span>
                 <input class="bio-input" name="system.bio.upbringing" type="text" value="{{system.bio.upbringing}}"
-                    placeholder="{{localize "YZEvereteno.Upbringing"}}" />
+                    placeholder="{{localize "YZEVERETENO.Upbringing"}}" />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.Humanite"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.Humanite"}}</span>
                 <input class="bio-checkbox" type="checkbox" name="system.bio.humanite" data-dtype="Boolean"
                     {{checked system.bio.humanite}} />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.GroupConcept"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.GroupConcept"}}</span>
                 <input class="bio-input" name="system.bio.groupConcept" type="text" value="{{system.bio.groupConcept}}"
-                    placeholder="{{localize "YZEvereteno.GroupConcept"}}" />
+                    placeholder="{{localize "YZEVERETENO.GroupConcept"}}" />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.PersonalProblem"}}</span>
-                <input class="bio-input" name="system.bio.personalProblem" type="text"
-                    value="{{system.bio.personalProblem}}" placeholder="{{localize "YZEvereteno.PersonalProblem"}}" />
+                <span class="bio-block-title">{{localize "YZEVERETENO.PersonalИзъян"}}</span>
+                <input class="bio-input" name="system.bio.personalИзъян" type="text"
+                    value="{{system.bio.personalProblem}}" placeholder="{{localize "YZEVERETENO.PersonalИзъян"}}" />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.CrewPosition"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.CrewPosition"}}</span>
                 <select class="skill-category crew-position">
                     {{#select currentCrewOption}}
                     {{#each crewOptions as |option|}}
@@ -40,30 +40,30 @@
                 </select>
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.Appearance"}}:
-                    {{localize "YZEvereteno.Face"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.Appearance"}}:
+                    {{localize "YZEVERETENO.Face"}}</span>
                 <input class="bio-input" name="system.bio.appearance.face" type="text"
-                    value="{{system.bio.appearance.face}}" placeholder="{{localize "YZEvereteno.Appearance"}}" />
+                    value="{{system.bio.appearance.face}}" placeholder="{{localize "YZEVERETENO.Appearance"}}" />
             </div>
             <div class="bio-block">
-                <span class="bio-block-title">{{localize "YZEvereteno.Appearance"}}:
-                    {{localize "YZEvereteno.Clothing"}}</span>
+                <span class="bio-block-title">{{localize "YZEVERETENO.Appearance"}}:
+                    {{localize "YZEVERETENO.Clothing"}}</span>
                 <input class="bio-input" name="system.bio.appearance.clothing" type="text"
-                    value="{{system.bio.appearance.clothing}}" placeholder="{{localize "YZEvereteno.Clothing"}}" />
+                    value="{{system.bio.appearance.clothing}}" placeholder="{{localize "YZEVERETENO.Clothing"}}" />
             </div>
         </div>
 
 
         <ol class="gear-list relations-list">
             <li class="gear-category-header flexrow">
-                <div class="gear-category-name first">{{localize "YZEvereteno.Relationships"}}</div>
-                <div class="gear-category-name center">{{localize "YZEvereteno.Buddy"}}</div>
+                <div class="gear-category-name first">{{localize "YZEVERETENO.Relationships"}}</div>
+                <div class="gear-category-name center">{{localize "YZEVERETENO.Buddy"}}</div>
                 {{#if owner}}
                 <div class="gear-controls">
                     <a class="gear-control-add-widget relationship-create"
-                        title='{{localize "YZEvereteno.AddRelationship"}}'
+                        title='{{localize "YZEVERETENO.AddRelationship"}}'
                         {{#each gearDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                        <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                        <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                     </a>
                 </div>
                 {{/if}}
@@ -72,14 +72,14 @@
             <li class="gear flexrow relation" data-item-id="{{relKey}}">
                 <div class=" gear-bg flexrow">
                     <input class="bio-input relation-name" type="text" name="system.relationships.{{relKey}}.name"
-                        value="{{relation.name}}" placeholder="{{localize "YZEvereteno.Name"}}" />
+                        value="{{relation.name}}" placeholder="{{localize "YZEVERETENO.Name"}}" />
                     <div class="flex1 flexrow buddy-box">
                         <input class="bio-checkbox" type="checkbox" name="system.relationships.{{relKey}}.buddy"
                             data-dtype="Boolean" {{checked relation.buddy}} />
                     </div>
                     <div class="biography-controls flexrow">
                         <a class="bio-control-widget relationship-delete"
-                            title={{localize "YZEvereteno.RemoveRelationship"}}><i class="fas fa-trash"></i></a>
+                            title={{localize "YZEVERETENO.RemoveRelationship"}}><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
             </li>

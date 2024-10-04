@@ -11,8 +11,8 @@
                 </div>
                 <div class="attr-name">{{getAttributeName key}}</div>
                 <div class="attr-rollable  rollable" data-rolltype="attribute" data-attributekey={{key}}
-                    data-roll="(@attributes.{{key}}.value)d6" data-label="{{getAttributeRollName key}}"><img
-                        src="systems/yzevereteno/css/icons/rolling-dices.svg"></div>
+                    data-roll="(@attributes.{{key}}.value)20" data-label="{{getAttributeRollName key}}"><img
+                        src="systems/YZEVERETENO/css/gods/rolling-dices.svg"></div>
             </div>
         </li>
         {{/each}}
@@ -63,12 +63,12 @@
 
     <ul class="critical-injuries-list">
         <li class="crit-header">
-            <h4>{{localize "YZEvereteno.CriticalInjuries"}}</h4>
+            <h4>{{localize "YZEVERETENO.CriticalInjuries"}}</h4>
             {{#if owner}}
             <div class="crit-add-controls">
-                <a class="crit-control-widget item-create" title='{{localize "YZEvereteno.CreateCriticalInjury"}}'
+                <a class="crit-control-widget item-create" title='{{localize "YZEVERETENO.CreateCriticalInjury"}}'
                     {{#each injuryDataSet as |v k|}}data-{{k}}="{{v}}" {{/each}}>
-                    <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                    <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                 </a>
             </div>
             {{/if}}
@@ -79,15 +79,15 @@
                 <div class="critical-injuries-name expandable-info flexrow">
                   <span>{{injury.name}}</span>
                   <div class="injury-description">
-                    <span>{{#if_eq injury.system.fatal true}}{{localize "YZEvereteno.FatalInjury"}}{{#if injury.system.timeLimit}} ({{injury.system.timeLimit}}){{/if}}!{{/if_eq}}</span>
+                    <span>{{#if_eq injury.system.fatal true}}{{localize "YZEVERETENO.FatalInjury"}}{{#if injury.system.timeLimit}} ({{injury.system.timeLimit}}){{/if}}!{{/if_eq}}</span>
                   </div>
                 </div>
                 <div class="crit-controls">
-                    <a class="crit-control-widget item-edit" title="{{localize "YZEvereteno.EditCriticalInjury"}}"><i
+                    <a class="crit-control-widget item-edit" title="{{localize "YZEVERETENO.EditCriticalInjury"}}"><i
                             class="fas fa-edit"></i></a>
-                    <a class="crit-control-widget item-post" title="{{localize "YZEvereteno.PostCriticalInjury"}}"><i
+                    <a class="crit-control-widget item-post" title="{{localize "YZEVERETENO.PostCriticalInjury"}}"><i
                             class="fas fa-comment"></i></a>
-                    <a class="crit-control-widget item-delete" title="{{localize "YZEvereteno.DeleteCriticalInjury"}}"><i class="fas fa-trash"></i></a>
+                    <a class="crit-control-widget item-delete" title="{{localize "YZEVERETENO.DeleteCriticalInjury"}}"><i class="fas fa-trash"></i></a>
                 </div>
             </div>
         </li>

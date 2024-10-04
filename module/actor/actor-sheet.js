@@ -12,12 +12,12 @@ import { buildCrewOptionsArray } from "./crew.js";
  * Extend the basic ActorSheet for a basic vereteno character
  * @extends {ActorSheet}
  */
-export class yzeveretenoActorSheet extends ActorSheet {
+export class YZEVERETENOActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["yzevereteno", "sheet", "actor", "character"],
-      template: "systems/yzevereteno/templates/actor/actor-sheet.html",
+      classes: ["YZEVERETENO", "sheet", "actor", "character"],
+      template: "systems/YZEVERETENO/templates/actor/actor-sheet.html",
       width: 1000,
       height: 800,
       resizable: false,
@@ -64,7 +64,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
     const sheetData = {
       editable: baseData.editable,
       owner: baseData.actor.isOwner,
-      config: CONFIG.YZEvereteno,
+      config: CONFIG.YZEVERETENO,
       bioNotes: bioNotes,
       ...baseData.actor,
       ...itemData,
@@ -118,14 +118,14 @@ export class yzeveretenoActorSheet extends ActorSheet {
       type: "gear",
       weight: "L",
       quantity: 1,
-      defaultname: game.i18n.localize("YZEvereteno.NewGear"),
+      defaultname: game.i18n.localize("YZEVERETENO.NewGear"),
     };
 
-    for (let k of Object.keys(CONFIG.YZEvereteno.talentCategories)) {
+    for (let k of Object.keys(CONFIG.YZEVERETENO.talentCategories)) {
       talents[k] = {
         dataset: {
           type: "talent",
-          defaultname: game.i18n.localize("YZEvereteno.NewTalent"),
+          defaultname: game.i18n.localize("YZEVERETENO.NewTalent"),
           category: k,
         },
         items: [],
@@ -135,7 +135,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
     const weaponDataSet = {
       type: "weapon",
       weight: "L",
-      defaultname: game.i18n.localize("YZEvereteno.NewWeapon"),
+      defaultname: game.i18n.localize("YZEVERETENO.NewWeapon"),
     };
 
     const explosiveDataSet = {
@@ -145,7 +145,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
       explosive: true,
       blastRadius: "close",
       blastPower: 1,
-      defaultname: game.i18n.localize("YZEvereteno.NewExplosive"),
+      defaultname: game.i18n.localize("YZEVERETENO.NewExplosive"),
     };
 
     const armorDataSet = {
@@ -153,12 +153,12 @@ export class yzeveretenoActorSheet extends ActorSheet {
       weight: "L",
       armorRating: 1,
       extraFeatures: 0,
-      defaultname: game.i18n.localize("YZEvereteno.NewArmor"),
+      defaultname: game.i18n.localize("YZEVERETENO.NewArmor"),
     };
 
     const injuryDataSet = {
       type: "injury",
-      defaultname: game.i18n.localize("YZEvereteno.NewCriticalInjury"),
+      defaultname: game.i18n.localize("YZEVERETENO.NewCriticalInjury"),
     };
 
     for (let i of actor.items) {
@@ -172,7 +172,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
         gear.push(i);
         if (isActive) {
           totalWeightPoints +=
-            CONFIG.YZEvereteno.gearWeightPoints[item.weight] * item.quantity;
+            CONFIG.YZEVERETENO.gearWeightPoints[item.weight] * item.quantity;
         }
       }
       // append to talents
@@ -189,13 +189,13 @@ export class yzeveretenoActorSheet extends ActorSheet {
         }
         if (isActive) {
           totalWeightPoints +=
-            CONFIG.YZEvereteno.gearWeightPoints[item.weight] * item.quantity;
+            CONFIG.YZEVERETENO.gearWeightPoints[item.weight] * item.quantity;
         }
       }
       if (i.type === "armor") {
         armor.push(i);
         if (isActive) {
-          totalWeightPoints += CONFIG.YZEvereteno.gearWeightPoints[item.weight]; // we assume 1 quantity.
+          totalWeightPoints += CONFIG.YZEVERETENO.gearWeightPoints[item.weight]; // we assume 1 quantity.
         }
       }
       if (i.type === "injury") {
@@ -275,16 +275,16 @@ export class yzeveretenoActorSheet extends ActorSheet {
       .find(".gear-quantity-input")
       .change(this._onGearQuantityChanged.bind(this));
 
-    // Delete Inventory Item
+    // Удалить Inventory Item
     html.find(".item-delete").click((ev) => {
       const confirmationDialog = new Dialog({
-        title: game.i18n.localize("YZEvereteno.ItemDeleteConfirmationTitle"),
+        title: game.i18n.localize("YZEVERETENO.ItemDeleteConfirmationTitle"),
         content: `<p>${game.i18n.localize(
-          "YZEvereteno.ItemDeleteConfirmationContent"
+          "YZEVERETENO.ItemDeleteConfirmationContent"
         )}</p>`,
         buttons: {
           yes: {
-            icon: '<i class="fas fa-check"></i>',
+            god: '<i class="fas fa-check"></i>',
             label: game.i18n.localize("Yes"),
             callback: () => {
               const li = $(ev.currentTarget).parents(".item");
@@ -296,7 +296,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
             },
           },
           no: {
-            icon: '<i class="fas fa-times"></i>',
+            god: '<i class="fas fa-times"></i>',
             label: game.i18n.localize("No"),
           },
         },
@@ -536,7 +536,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
       itemModifiers: itemModifiers,
     };
     const chatOptions = this.actor._prepareChatRollOptions(
-      "systems/yzevereteno/templates/sidebar/roll.html",
+      "systems/YZEVERETENO/templates/sidebar/roll.html",
       dataset.rolltype
     );
     new veretenoModifierDialog(rollData, chatOptions).render(true);
@@ -564,7 +564,7 @@ export class yzeveretenoActorSheet extends ActorSheet {
       let div = $(
         `<div class="item-summary"><div class="item-summary-wrapper"><div>${chatData.description}</div></div></div>`
       );
-      if (!game.settings.get("yzevereteno", "AlwaysShowFeatures")) {
+      if (!game.settings.get("YZEVERETENO", "AlwaysShowFeatures")) {
         let props = $(`<div class="item-properties"></div>`);
         chatData.properties.forEach((p) =>
           props.append(`<span class="tag">${p}</span>`)

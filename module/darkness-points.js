@@ -38,7 +38,7 @@ async function decrementDarknessPoint() {
 
 function getDarknessPointsForUserID(userID) {
   let user = game.users.get(userID);
-  let dPoints = user.getFlag("yzevereteno", "darknessPoints");
+  let dPoints = user.getFlag("YZEVERETENO", "darknessPoints");
   if (!dPoints) {
     dPoints = {
       value: 0,
@@ -49,7 +49,7 @@ function getDarknessPointsForUserID(userID) {
 
 async function setDarknessPointsForUser(userID, dPoints) {
   let user = game.users.get(userID);
-  await user.setFlag("yzevereteno", "darknessPoints", dPoints);
+  await user.setFlag("YZEVERETENO", "darknessPoints", dPoints);
 }
 
 function getDarknessPoints() {
@@ -87,7 +87,7 @@ async function showDarknessPoints(totalPoints) {
   };
 
   messageData.content = await renderTemplate(
-    "systems/yzevereteno/templates/sidebar/darkness-points-chat.html",
+    "systems/YZEVERETENO/templates/sidebar/darkness-points-chat.html",
     dpData
   );
   await ChatMessage.create(messageData);
@@ -110,13 +110,13 @@ export class DarknessPointDisplay extends Application {
     return mergeObject(super.defaultOptions, {
       id: "vereteno-darness-points-display",
       template:
-        "systems/yzevereteno/templates/darkness-points/darkness-points-display.html",
+        "systems/YZEVERETENO/templates/darkness-points/darkness-points-display.html",
       top: 100,
       left: 100,
       height: 120,
       resizable: false,
       popout: false,
-      title: game.i18n.localize("YZEvereteno.DarknessPoints"),
+      title: game.i18n.localize("YZEVERETENO.DarknessPoints"),
       background: "none",
     });
   }

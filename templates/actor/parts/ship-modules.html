@@ -2,17 +2,17 @@
   <ol class="module-list">
       {{!-- setup header for required modules --}}
       <li class="module-category-header flexrow">
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleRequired"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.TechTier"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Bonus"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleState"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleRequired"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.TechTier"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Bonus"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleState"}}</span>
           {{#if owner}}
           <div class="module-controls">
-              <a class="module-control-add-widget module-create" title='{{localize "YZEvereteno.ShipCreateModule"}}'
+              <a class="module-control-add-widget module-create" title='{{localize "YZEVERETENO.ShipCreateModule"}}'
                   {{#each modulesList.required.dataset as |v k|}}
                     data-{{k}}="{{v}}"
                   {{/each}}>
-                  <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                  <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
               </a>
           </div>
           {{/if}}
@@ -32,21 +32,21 @@
                           data-module={{module._id}}
                           >
                           {{#if module.system.enabled}}
-                            {{localize "YZEvereteno.Enabled"}}
+                            {{localize "YZEVERETENO.Enabled"}}
                           {{else}}
-                            {{localize "YZEvereteno.Disabled"}}
+                            {{localize "YZEVERETENO.Disabled"}}
                           {{/if}}
                         </button>
                       </span>
                   </div>
                   <div class="module-controls">
                       <a class="edit-widget faded module-edit"
-                          title="{{localize "YZEvereteno.ShipEditModule"}}"
+                          title="{{localize "YZEVERETENO.ShipEditModule"}}"
                           data-module={{module._id}}>
                           <i class="fas fa-edit"></i>
                         </a>
                       <a class="edit-widget faded module-delete"
-                          title="{{localize "YZEvereteno.ShipDeleteModule"}}"
+                          title="{{localize "YZEVERETENO.ShipDeleteModule"}}"
                           data-module={{module._id}}>
                           <i class="fas fa-trash"></i>
                         </a>
@@ -69,17 +69,17 @@
 
       {{!-- setup header for optional modules --}}
       <li class="module-category-header flexrow">
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleOptional"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.TechTier"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Bonus"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleState"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleOptional"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.TechTier"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Bonus"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleState"}}</span>
           {{#if owner}}
           <div class="module-controls">
-              <a class="module-control-add-widget module-create" title='{{localize "YZEvereteno.ShipCreateModule"}}'
+              <a class="module-control-add-widget module-create" title='{{localize "YZEVERETENO.ShipCreateModule"}}'
                   {{#each modulesList.optional.dataset as |v k|}}
                     data-{{k}}="{{v}}"
                   {{/each}}>
-                  <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                  <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
               </a>
           </div>
           {{/if}}
@@ -99,21 +99,21 @@
                           data-module={{module._id}}
                           >
                           {{#if module.system.enabled}}
-                            {{localize "YZEvereteno.Enabled"}}
+                            {{localize "YZEVERETENO.Enabled"}}
                           {{else}}
-                            {{localize "YZEvereteno.Disabled"}}
+                            {{localize "YZEVERETENO.Disabled"}}
                           {{/if}}
                         </button>
                       </span>
                   </div>
                   <div class="module-controls">
                       <a class="edit-widget faded module-edit"
-                          title="{{localize "YZEvereteno.ShipEditModule"}}"
+                          title="{{localize "YZEVERETENO.ShipEditModule"}}"
                           data-module={{module._id}}>
                           <i class="fas fa-edit"></i>
                         </a>
                       <a class="edit-widget faded module-delete"
-                          title="{{localize "YZEvereteno.ShipDeleteModule"}}"
+                          title="{{localize "YZEVERETENO.ShipDeleteModule"}}"
                           data-module={{module._id}}>
                           <i class="fas fa-trash"></i>
                         </a>
@@ -136,20 +136,20 @@
 
       {{!-- setup header for weapon modules --}}
       <li class="module-category-header flexrow">
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleWeapon"}}</span>
-          <!-- <span class="module-category-name flexrow">{{localize "YZEvereteno.TechTier"}}</span> -->
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Bonus"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Damage"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Crit"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.Range"}}</span>
-          <span class="module-category-name flexrow">{{localize "YZEvereteno.ShipModuleState"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleWeapon"}}</span>
+          <!-- <span class="module-category-name flexrow">{{localize "YZEVERETENO.TechTier"}}</span> -->
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Bonus"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Damage"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Crit"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.Range"}}</span>
+          <span class="module-category-name flexrow">{{localize "YZEVERETENO.ShipModuleState"}}</span>
           {{#if owner}}
           <div class="module-controls">
-              <a class="module-control-add-widget module-create" title='{{localize "YZEvereteno.ShipCreateModule"}}'
+              <a class="module-control-add-widget module-create" title='{{localize "YZEVERETENO.ShipCreateModule"}}'
                   {{#each modulesList.weapon.dataset as |v k|}}
                     data-{{k}}="{{v}}"
                   {{/each}}>
-                  <i class="fas fa-plus"></i> {{localize "YZEvereteno.Add"}}
+                  <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
               </a>
           </div>
           {{/if}}
@@ -174,19 +174,19 @@
                       data-module={{module._id}}
                       >
                       {{#if module.system.enabled}}
-                        {{localize "YZEvereteno.Enabled"}}
+                        {{localize "YZEVERETENO.Enabled"}}
                       {{else}}
-                        {{localize "YZEvereteno.Disabled"}}
+                        {{localize "YZEVERETENO.Disabled"}}
                       {{/if}}
                     </button>
                   </span>
                     <a class="edit-widget faded module-edit"
-                        title="{{localize "YZEvereteno.ShipEditModule"}}"
+                        title="{{localize "YZEVERETENO.ShipEditModule"}}"
                         data-module={{module._id}}>
                         <i class="fas fa-edit"></i>
                       </a>
                     <a class="edit-widget faded module-delete"
-                        title="{{localize "YZEvereteno.ShipDeleteModule"}}"
+                        title="{{localize "YZEVERETENO.ShipDeleteModule"}}"
                         data-module={{module._id}}>
                         <i class="fas fa-trash"></i>
                       </a>

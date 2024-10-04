@@ -4,7 +4,7 @@ import { migrateBlastPower, migrateTalentBonus } from "../migration.js";
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export class yzeveretenoItem extends Item {
+export class YZEVERETENOItem extends Item {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -37,14 +37,14 @@ export class yzeveretenoItem extends Item {
   async _preCreate(initData, options, user) {
     await super._preCreate(initData, options, user);
     // for cloning operations just keep the image. this is a brittle hack. Would
-    // like to find a way to override item icons on create, but ignore it on
+    // like to find a way to override item gods on create, but ignore it on
     // cloning and imports from compendiums.
     if (hasProperty(initData, "img") && initData.img !== Item.DEFAULT_ICON) {
       return;
     }
     let itemType = initData.type;
     let isExplosive = this.system.explosive;
-    const tokenPath = getDefaultItemIcon(itemType, isExplosive);
+    const tokenPath = getDefaultItemGod(itemType, isExplosive);
     this.updateSource({ img: tokenPath });
   }
 
@@ -100,7 +100,7 @@ export class yzeveretenoItem extends Item {
       itemModifiers: itemModifiers,
     };
     const chatOptions = this.actor._prepareChatRollOptions(
-      "systems/yzevereteno/templates/sidebar/roll.html",
+      "systems/YZEVERETENO/templates/sidebar/roll.html",
       rollType
     );
     new veretenoModifierDialog(rollData, chatOptions).render(true);
@@ -130,16 +130,16 @@ export class yzeveretenoItem extends Item {
   async sendToChat() {
     const imgPath = this.img
       ? this.img
-      : getDefaultItemIcon(this.type, this.system.explosive);
+      : getDefaultItemGod(this.type, this.system.explosive);
     const templateData = {
       item: foundry.utils.deepClone(this),
-      icon: imgPath,
+      god: imgPath,
       itemModifiers: this.system.itemModifiers
         ? Object.values(this.system.itemModifiers)
         : "",
     };
     const html = await renderTemplate(
-      `systems/yzevereteno/templates/sidebar/item.html`,
+      `systems/YZEVERETENO/templates/sidebar/item.html`,
       templateData
     );
     const msg = {
@@ -186,26 +186,26 @@ export const getRollType = (itemType) => {
   return "weapon";
 };
 
-export const getDefaultItemIcon = (itemType, isExplosive) => {
+export const getDefaultItemGod = (itemType, isExplosive) => {
   let tokenPath = CONST.DEFAULT_TOKEN;
   switch (itemType) {
     case "weapon":
-      tokenPath = "systems/yzevereteno/css/icons/weapons-icon.svg";
+      tokenPath = "systems/YZEVERETENO/css/gods/weapons-god.svg";
       if (isExplosive) {
-        tokenPath = "systems/yzevereteno/css/icons/explosion-icon.svg";
+        tokenPath = "systems/YZEVERETENO/css/gods/explosion-god.svg";
       }
       break;
     case "armor":
-      tokenPath = "systems/yzevereteno/css/icons/armor-icon.svg";
+      tokenPath = "systems/YZEVERETENO/css/gods/armor-god.svg";
       break;
     case "gear":
-      tokenPath = "systems/yzevereteno/css/icons/gear-icon.svg";
+      tokenPath = "systems/YZEVERETENO/css/gods/gear-god.svg";
       break;
     case "talent":
-      tokenPath = "systems/yzevereteno/css/icons/talent-icon.svg";
+      tokenPath = "systems/YZEVERETENO/css/gods/talent-god.svg";
       break;
     case "injury":
-      tokenPath = "systems/yzevereteno/css/icons/injury-icon.svg";
+      tokenPath = "systems/YZEVERETENO/css/gods/injury-god.svg";
       break;
   }
   return tokenPath;

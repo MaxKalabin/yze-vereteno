@@ -1,7 +1,6 @@
 {
-    "id": "yzevereteno",
-    "name": "yzevereteno",
-    "title": "yzevereteno",
+    "id": "YZEVERETENO",
+    "title": "YZEVERETENO",
     "description": "Vereteno for Foundry VTT.",
     "version": "0.0.1",
     "compatibility": {
@@ -15,12 +14,12 @@
         }
     ],
     "esmodules": [
-        "module/yzevereteno.js",
+        "module/YZEVERETENO.js",
         "module/hooks.js"
     ],
     "styles": [
-        "css/yzevereteno.css",
-        "css/yzeveretenomce.css"
+        "css/YZEVERETENO.css",
+        "css/YZEVERETENOmce.css"
     ],
     "scripts": [],
     "packs": [
@@ -37,6 +36,11 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
+        },
+        {
+            "lang": "ru",
+            "name": "Russian",
+            "path": "lang/ru.json"
         },
         {
             "lang": "de",
@@ -69,6 +73,6 @@
     "primaryTokenAttribute": "health",
     "secondaryTokenAttribute": "power",
     "url": "",
-    "manifest": "https://github.com/MaxKalabin/yze-vereteno/blob/main/system.json",
-    "download": "https://github.com/MaxKalabin/yze-vereteno/blob/main/system.json"
+    "manifest": "",
+    "download": ""
 }

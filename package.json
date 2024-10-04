@@ -1,7 +1,7 @@
 {
-  "name": "yzecoriolis",
+  "name": "YZEVERETENO",
   "version": "1.0.0",
-  "description": "CSS compiler for the Year Zero Engine - Coriolis system",
+  "description": "CSS compiler for the Year Zero Engine - vereteno system",
   "scripts": {
     "build": "gulp",
     "compile": "gulp css",

@@ -1,10 +1,10 @@
 <div class="feature-section flexrow">
     <ol>
         <li class="special-feature-header flexrow">
-            <h3 class="feature-name flexrow">{{localize "YZECORIOLIS.ItemModifiers"}}</h3>
+            <h3 class="feature-name flexrow">{{localize "YZEVERETENO.ItemModifiers"}}</h3>
             <div class="feature-controls">
-                <a class="feature-control itemModifier-create" title='{{localize "YZECORIOLIS.ItemModifierCreate"}}'>
-                    <i class="fas fa-plus"></i> {{localize "YZECORIOLIS.Add"}}
+                <a class="feature-control itemModifier-create" title='{{localize "YZEVERETENO.ItemModifierCreate"}}'>
+                    <i class="fas fa-plus"></i> {{localize "YZEVERETENO.Add"}}
                 </a>
             </div>
         </li>
@@ -13,76 +13,76 @@
             <div class="feature-name">
                 <select name="system.itemModifiers.{{id}}.mod">
                     {{#select itemmod.mod}}
-                    <option value="itemModifierNone" disabled  selected>{{localize "YZECORIOLIS.ItemModifierSelect"}}</option>
-                    <optgroup label={{localize "YZECORIOLIS.Attributes"}}>
-                      <option value="itemModifierAttrAll">{{localize "YZECORIOLIS.AttrAll"}}</option>
-                      <option value="itemModifierAttrStrength">{{localize "YZECORIOLIS.AttrStrength"}}</option>
-                      <option value="itemModifierAttrAgility">{{localize "YZECORIOLIS.AttrAgility"}}</option>
-                      <option value="itemModifierAttrWits">{{localize "YZECORIOLIS.AttrWits"}}</option>
-                      <option value="itemModifierAttrEmpathy">{{localize "YZECORIOLIS.AttrEmpathy"}}</option>
+                    <option value="itemModifierNone" disabled  selected>{{localize "YZEVERETENO.ItemModifierSelect"}}</option>
+                    <optgroup label={{localize "YZEVERETENO.Attributes"}}>
+                      <option value="itemModifierAttrAll">{{localize "YZEVERETENO.AttrAll"}}</option>
+                      <option value="itemModifierAttrStrength">{{localize "YZEVERETENO.AttrStrength"}}</option>
+                      <option value="itemModifierAttrAgility">{{localize "YZEVERETENO.AttrAgility"}}</option>
+                      <option value="itemModifierAttrWits">{{localize "YZEVERETENO.AttrWits"}}</option>
+                      <option value="itemModifierAttrEmpathy">{{localize "YZEVERETENO.AttrEmpathy"}}</option>
                     </optgroup>
-                    <optgroup label={{localize "YZECORIOLIS.SkillCatGeneral"}}>
-                      <option value="itemModifierSkillCatGeneralAll">{{localize "YZECORIOLIS.SkillCatGeneralAll"}}</option>
-                      <option value="itemModifierSkillDex">{{localize "YZECORIOLIS.SkillDexterity"}}</option>
-                      <option value="itemModifierSkillForce">{{localize "YZECORIOLIS.SkillForce"}}</option>
-                      <option value="itemModifierSkillInf">{{localize "YZECORIOLIS.SkillInfiltration"}}</option>
-                      <option value="itemModifierSkillMan">{{localize "YZECORIOLIS.SkillManipulation"}}</option>
-                      <option value="itemModifierSkillMelee">{{localize "YZECORIOLIS.SkillMeleeCombat"}}</option>
-                      <option value="itemModifierSkillObs">{{localize "YZECORIOLIS.SkillObservation"}}</option>
-                      <option value="itemModifierSkillRange">{{localize "YZECORIOLIS.SkillRangedCombat"}}</option>
-                      <option value="itemModifierSkillSurv">{{localize "YZECORIOLIS.SkillSurvival"}}</option>
+                    <optgroup label={{localize "YZEVERETENO.SkillCatGeneral"}}>
+                      <option value="itemModifierSkillCatGeneralAll">{{localize "YZEVERETENO.SkillCatGeneralAll"}}</option>
+                      <option value="itemModifierSkillDex">{{localize "YZEVERETENO.SkillDexterity"}}</option>
+                      <option value="itemModifierSkillForce">{{localize "YZEVERETENO.SkillForce"}}</option>
+                      <option value="itemModifierSkillInf">{{localize "YZEVERETENO.SkillStealth"}}</option>
+                      <option value="itemModifierSkillMan">{{localize "YZEVERETENO.SkillManipulation"}}</option>
+                      <option value="itemModifierSkillMelee">{{localize "YZEVERETENO.SkillMeleeCombat"}}</option>
+                      <option value="itemModifierSkillObs">{{localize "YZEVERETENO.SkillObservation"}}</option>
+                      <option value="itemModifierSkillRange">{{localize "YZEVERETENO.SkillRangedCombat"}}</option>
+                      <option value="itemModifierSkillSurv">{{localize "YZEVERETENO.SkillSurvival"}}</option>
                     </optgroup>
-                    <optgroup label={{localize "YZECORIOLIS.SkillCatAdvanced"}}>
-                      <option value="itemModifierSkillCatAdvancedAll">{{localize "YZECORIOLIS.SkillCatAdvancedAll"}}</option>
-                      <option value="itemModifierSkillCom">{{localize "YZECORIOLIS.SkillCommand"}}</option>
-                      <option value="itemModifierSkillCult">{{localize "YZECORIOLIS.SkillCulture"}}</option>
-                      <option value="itemModifierSkillData">{{localize "YZECORIOLIS.SkillDataDjinn"}}</option>
-                      <option value="itemModifierSkillMedi">{{localize "YZECORIOLIS.SkillMedicurgy"}}</option>
-                      <option value="itemModifierSkillMys">{{localize "YZECORIOLIS.SkillMysticPowers"}}</option>
-                      <option value="itemModifierSkillPil">{{localize "YZECORIOLIS.SkillPilot"}}</option>
-                      <option value="itemModifierSkillSci">{{localize "YZECORIOLIS.SkillScience"}}</option>
-                      <option value="itemModifierSkillTech">{{localize "YZECORIOLIS.SkillTechnology"}}</option>
+                    <optgroup label={{localize "YZEVERETENO.SkillCatAdvanced"}}>
+                      <option value="itemModifierSkillCatAdvancedAll">{{localize "YZEVERETENO.SkillCatAdvancedAll"}}</option>
+                      <option value="itemModifierSkillCom">{{localize "YZEVERETENO.SkillLidership"}}</option>
+                      <option value="itemModifierSkillCult">{{localize "YZEVERETENO.SkillCulture"}}</option>
+                      <option value="itemModifierSkillData">{{localize "YZEVERETENO.SkillCybershaman"}}</option>
+                      <option value="itemModifierSkillMedi">{{localize "YZEVERETENO.SkillZnaharstvo"}}</option>
+                      <option value="itemModifierSkillMys">{{localize "YZEVERETENO.SkillVedovstvo"}}</option>
+                      <option value="itemModifierSkillPil">{{localize "YZEVERETENO.SkillPilot"}}</option>
+                      <option value="itemModifierSkillSci">{{localize "YZEVERETENO.SkillScience"}}</option>
+                      <option value="itemModifierSkillTech">{{localize "YZEVERETENO.SkillMechanic"}}</option>
                     </optgroup>
-                    <optgroup label={{localize "YZECORIOLIS.Blessings"}}>
-                      <option value="itemModifierBlessingsAll">{{localize "YZECORIOLIS.BlessingsAll"}}</option>
-                      <option value="itemModifierBlessingsMessenger">{{localize "YZECORIOLIS.IconMessenger"}} {{#if_eq this.mod "itemModifierBlessingsMessenger"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsDancer">{{localize "YZECORIOLIS.IconDancer"}} {{#if_eq this.mod "itemModifierBlessingsDancer"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsGambler">{{localize "YZECORIOLIS.IconGambler"}} {{#if_eq this.mod "itemModifierBlessingsGambler"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsDeckhand">{{localize "YZECORIOLIS.IconDeckhand"}} {{#if_eq this.mod "itemModifierBlessingsDeckhand"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsMerchant">{{localize "YZECORIOLIS.IconMerchant"}} {{#if_eq this.mod "itemModifierBlessingsMerchant"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsJudge">{{localize "YZECORIOLIS.IconJudge"}} {{#if_eq this.mod "itemModifierBlessingsJudge"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsTraveler">{{localize "YZECORIOLIS.IconTraveler"}} {{#if_eq this.mod "itemModifierBlessingsTraveler"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsLadyOfTears">{{localize "YZECORIOLIS.IconLadyOfTears"}} {{#if_eq this.mod "itemModifierBlessingsLadyOfTears"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
-                      <option value="itemModifierBlessingsFacelessOne">{{localize "YZECORIOLIS.IconFaceless"}} {{#if_eq this.mod "itemModifierBlessingsFacelessOne"}}({{localize "YZECORIOLIS.Blessing"}}){{/if_eq}}</option>
+                    <optgroup label={{localize "YZEVERETENO.Blessings"}}>
+                      <option value="itemModifierBlessingsAll">{{localize "YZEVERETENO.BlessingsAll"}}</option>
+                      <option value="itemModifierBlessingsLada">{{localize "YZEVERETENO.GodLada"}} {{#if_eq this.mod "itemModifierBlessingsLada"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsPerun">{{localize "YZEVERETENO.GodPerun"}} {{#if_eq this.mod "itemModifierBlessingsPerun"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsDajbog">{{localize "YZEVERETENO.GodDajbog"}} {{#if_eq this.mod "itemModifierBlessingsDajbog"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsYrilo">{{localize "YZEVERETENO.GodYrilo"}} {{#if_eq this.mod "itemModifierBlessingsYrilo"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsSvarog">{{localize "YZEVERETENO.GodSvarog"}} {{#if_eq this.mod "itemModifierBlessingsSvarog"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsHors">{{localize "YZEVERETENO.GodHors"}} {{#if_eq this.mod "itemModifierBlessingsHors"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsStribog">{{localize "YZEVERETENO.GodStribog"}} {{#if_eq this.mod "itemModifierBlessingsStribog"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsrod">{{localize "YZEVERETENO.GodRod"}} {{#if_eq this.mod "itemModifierBlessingsrod"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
+                      <option value="itemModifierBlessingsMorenaOne">{{localize "YZEVERETENO.GodMorena"}} {{#if_eq this.mod "itemModifierBlessingsMorenaOne"}}({{localize "YZEVERETENO.Blessing"}}){{/if_eq}}</option>
                     </optgroup>
-                    <optgroup label={{localize "YZECORIOLIS.Prayers"}}>
-                      <option value="itemModifierPrayersAll">{{localize "YZECORIOLIS.PrayersAll"}}</option>
-                      <option value="itemModifierPrayersMessenger">{{localize "YZECORIOLIS.IconMessenger"}} {{#if_eq this.mod "itemModifierPrayersMessenger"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersDancer">{{localize "YZECORIOLIS.IconDancer"}} {{#if_eq this.mod "itemModifierPrayersDancer"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersGambler">{{localize "YZECORIOLIS.IconGambler"}} {{#if_eq this.mod "itemModifierPrayersGambler"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersDeckhand">{{localize "YZECORIOLIS.IconDeckhand"}} {{#if_eq this.mod "itemModifierPrayersDeckhand"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersMerchant">{{localize "YZECORIOLIS.IconMerchant"}} {{#if_eq this.mod "itemModifierPrayersMerchant"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersJudge">{{localize "YZECORIOLIS.IconJudge"}} {{#if_eq this.mod "itemModifierPrayersJudge"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersTraveler">{{localize "YZECORIOLIS.IconTraveler"}} {{#if_eq this.mod "itemModifierPrayersTraveler"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersLadyOfTears">{{localize "YZECORIOLIS.IconLadyOfTears"}} {{#if_eq this.mod "itemModifierPrayersLadyOfTears"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
-                      <option value="itemModifierPrayersFacelessOne">{{localize "YZECORIOLIS.IconFaceless"}} {{#if_eq this.mod "itemModifierPrayersFacelessOne"}}({{localize "YZECORIOLIS.Prayer"}}){{/if_eq}}</option>
+                    <optgroup label={{localize "YZEVERETENO.Prayers"}}>
+                      <option value="itemModifierPrayersAll">{{localize "YZEVERETENO.PrayersAll"}}</option>
+                      <option value="itemModifierPrayersLada">{{localize "YZEVERETENO.GodLada"}} {{#if_eq this.mod "itemModifierPrayersLada"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersPerun">{{localize "YZEVERETENO.GodPerun"}} {{#if_eq this.mod "itemModifierPrayersPerun"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersDajbog">{{localize "YZEVERETENO.GodDajbog"}} {{#if_eq this.mod "itemModifierPrayersDajbog"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersYrilo">{{localize "YZEVERETENO.GodYrilo"}} {{#if_eq this.mod "itemModifierPrayersYrilo"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersSvarog">{{localize "YZEVERETENO.GodSvarog"}} {{#if_eq this.mod "itemModifierPrayersSvarog"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersHors">{{localize "YZEVERETENO.GodHors"}} {{#if_eq this.mod "itemModifierPrayersHors"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersStribog">{{localize "YZEVERETENO.GodStribog"}} {{#if_eq this.mod "itemModifierPrayersStribog"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersrod">{{localize "YZEVERETENO.GodRod"}} {{#if_eq this.mod "itemModifierPrayersrod"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
+                      <option value="itemModifierPrayersMorenaOne">{{localize "YZEVERETENO.GodMorena"}} {{#if_eq this.mod "itemModifierPrayersMorenaOne"}}({{localize "YZEVERETENO.Prayer"}}){{/if_eq}}</option>
                     </optgroup>
-                    <optgroup label={{localize "YZECORIOLIS.Other"}}>
-                      <option value="itemModifierHP">{{localize "YZECORIOLIS.HitPoints"}}</option>
-                      <option value="itemModifierMP">{{localize "YZECORIOLIS.MindPoints"}}</option>
-                      <option value="itemModifierArmor">{{localize "YZECORIOLIS.Armor"}}</option>
-                      <option value="itemModifierRad">{{localize "YZECORIOLIS.Radiation"}}</option>
-                      <option value="itemModifierEnc">{{localize "YZECORIOLIS.Encumbrance"}}</option>
-                      <option value="itemModifierMR">{{localize "YZECORIOLIS.MovementRate"}}</option>
+                    <optgroup label={{localize "YZEVERETENO.Other"}}>
+                      <option value="itemModifierHP">{{localize "YZEVERETENO.HitPoints"}}</option>
+                      <option value="itemModifierMP">{{localize "YZEVERETENO.MindPoints"}}</option>
+                      <option value="itemModifierArmor">{{localize "YZEVERETENO.Armor"}}</option>
+                      <option value="itemModifierRad">{{localize "YZEVERETENO.Radiation"}}</option>
+                      <option value="itemModifierEnc">{{localize "YZEVERETENO.Encumbrance"}}</option>
+                      <option value="itemModifierMR">{{localize "YZEVERETENO.MovementRate"}}</option>
                     </optgroup>
                     {{/select}}
                 </select>
             </div>
-            <div style="flex: 1 1 10%;" title="{{localize "YZECORIOLIS.ItemModifierValue"}}">
+            <div style="flex: 1 1 10%;" title="{{localize "YZEVERETENO.ItemModifierValue"}}">
                 <input name="system.itemModifiers.{{id}}.value" type="number" value="{{#if itemmod.value}}{{itemmod.value}}{{else}}0{{/if}}" style="text-align: center;"/>
             </div>
             <div class="feature-controls">
-              <a class="feature-control itemModifier-delete" title="{{localize 'YZECORIOLIS.ItemModifierDelete'}}" data-item-id="{{id}}"><i class="fas fa-trash"></i></a>
+              <a class="feature-control itemModifier-delete" title="{{localize 'YZEVERETENO.ItemModifierDelete'}}" data-item-id="{{id}}"><i class="fas fa-trash"></i></a>
             </div>
         </li>
         {{/each}}

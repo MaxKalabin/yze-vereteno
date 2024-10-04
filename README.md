@@ -2,11 +2,11 @@
 
 1. Inside Foundry's Configuration and Setup screen, go to **Game Systems**
 2. Click "Install System"
-3. In the Manifest URL field paste: `https://raw.githubusercontent.com/winks-vtt/yze-coriolis/master/system.json`
+3. In the Manifest URL field paste: `https://raw.githubusercontent.com/winks-vtt/yze-vereteno/master/system.json`
 
 ## Features
 
-![Character Sheet](https://github.com/winks-vtt/yze-coriolis/raw/master/images/char_sheet_preview.png)
+![Character Sheet](https://github.com/winks-vtt/yze-vereteno/raw/master/images/char_sheet_preview.png)
 
 - Character sheets for PCs
 - Ship sheets for crew ships
@@ -23,25 +23,25 @@
 
 ### Modifying Rolls
 
-![Modifying Rolls](https://github.com/winks-vtt/yze-coriolis/raw/master/images/ht_modifier_rolls.gif)
+![Modifying Rolls](https://github.com/winks-vtt/yze-vereteno/raw/master/images/ht_modifier_rolls.gif)
 
 When selecting an attribute or skill, a pop up will request a modifier to any roll coming from the character sheet.
 
 ### Pushing Rolls
 
-![Pushing Rolls](https://github.com/winks-vtt/yze-coriolis/raw/master/images/ht_push_rolls.gif)
+![Pushing Rolls](https://github.com/winks-vtt/yze-vereteno/raw/master/images/ht_push_rolls.gif)
 
-To push a roll, click on the "pray to the Icons" button under the roll in the chat window
+To push a roll, click on the "pray to the Gods" button under the roll in the chat window
 
 ### Using Weapons and Armor
 
-![Using Items](https://github.com/winks-vtt/yze-coriolis/raw/master/images/ht_use_items.gif)
+![Using Items](https://github.com/winks-vtt/yze-vereteno/raw/master/images/ht_use_items.gif)
 
-Weapons, Explosives, and Armor can be rolled in the items tab. You can click on the name of the item to unfold further details, or click on the icon of the item to roll. Rollable items will fade to a dice icon.
+Weapons, Explosives, and Armor can be rolled in the items tab. You can click on the name of the item to unfold further details, or click on the god of the item to roll. Rollable items will fade to a dice god.
 
 ### Handling Darkness Points
 
-![Darkness Points Tools](https://github.com/winks-vtt/yze-coriolis/raw/master/images/dp_bar.png)
+![Darkness Points Tools](https://github.com/winks-vtt/yze-vereteno/raw/master/images/dp_bar.png)
 
 - The GM can increment or decrement darkness points via the tool bar on the left.
 - Whenever a player pushes a roll, 1 DP is added to the DB pool of the GM.
@@ -67,7 +67,7 @@ For questions, feature requests, or bug reports, feel free to contact me on the 
 ## Art Credits
 
 - Placeholder character key art: By [Alex Okafor](http://www.paradeofrain.com/) under [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/).
-- Character sheet icons: by [LORC](https://lorcblog.blogspot.com/) under [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- Character sheet gods: by [LORC](https://lorcblog.blogspot.com/) under [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 - Character Sheet background: NASA Hubble under [Public Domain](https://hubblesite.org/about_us/copyright.php).
 
 ## License
